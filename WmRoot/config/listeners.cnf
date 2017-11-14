@@ -59,7 +59,7 @@
       <number name="port" type="Integer">5555</number>
       <value name="protocol">HTTP</value>
       <value name="pkg">WmRoot</value>
-      <value name="enabled">true</value>
+      <value name="enabled">false</value>
       <value name="key">HTTPListener@5555</value>
       <value name="uniqueID">28cee6c59b7982b715e3fe5f919</value>
       <value name="portAlias">Port_5555</value>
@@ -709,8 +709,8 @@
           <value>wm.server.mimetypes:readMimeTypes</value>
           <value>wm.server.query:getTerracottaLicenseInformation</value>
           <value>wm.server.admin:setSecurityAuditSettings</value>
-          <value>wm.server.replicator.adminui:subscriptionAdd</value>
           <value>wm.server.admin:setExtendedSettingsVisible</value>
+          <value>wm.server.replicator.adminui:subscriptionAdd</value>
           <value>wm.server.proxy:createProxyServerAlias</value>
           <value>wm.server.portAccess:resetPort</value>
           <value>wm.server.tx:end</value>
