@@ -1,0 +1,69 @@
+<service xmlns="http://ws.apache.org/ns/synapse" xmlns:mx="http://mediator.softwareag.com/custom" clientProduct="WST" clientVersion="9.12.0.0000-0243" cs_service_key="VirtualServiceForSaaS" name="CSGov.VirtualServiceForSaaS" style="REST" transports="http" type="virtual">
+  <resources>
+    <wsdl>
+      <wsdl:description xmlns:wsdl="http://www.w3.org/ns/wsdl" xmlns:tns="http://namespaces.cloudstreams.com/wsdl" xmlns:whttp="http://www.w3.org/ns/wsdl/http" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsdlx="http://www.w3.org/ns/wsdl-extensions" targetNamespace="http://namespaces.cloudstreams.com/wsdl">
+        <wsdl:types />
+        <wsdl:interface name="VirtualServiceForSaaS_interface">
+          <wsdl:operation name="Accounts" pattern="http://www.w3.org/ns/wsdl/in-out" />
+        </wsdl:interface>
+        <wsdl:binding interface="tns:VirtualServiceForSaaS_interface" name="VirtualServiceForSaaS_binding" type="http://www.w3.org/ns/wsdl/http">
+          <wsdl:operation ref="tns:Accounts" whttp:location="Accounts" whttp:method="GET" />
+        </wsdl:binding>
+        <wsdl:service interface="tns:VirtualServiceForSaaS_interface" name="CSGov.VirtualServiceForSaaS">
+          <wsdl:endpoint address="" binding="tns:VirtualServiceForSaaS_binding" name="VirtualServiceForSaaS_abstractEndpoint" />
+        </wsdl:service>
+      </wsdl:description>
+    </wsdl>
+  </resources>
+  <definition>
+    <monitorPolicies>
+      <monitor name="MonitorPolicy">
+        <evaluation scope="Service">
+          <rules>
+            <rule operator="GT" reading="availability" />
+          </rules>
+          <alert frequency="always" interval="1" />
+        </evaluation>
+        <reporting>
+          <destinations>
+            <jdbc includeRequest="always" includeResponse="always" />
+            <localLog includeRequest="always" includeResponse="always" level="info" />
+          </destinations>
+        </reporting>
+      </monitor>
+    </monitorPolicies>
+    <inSequence>
+      <http-config>
+        <authentication mode="incoming" />
+        <headers />
+      </http-config>
+      <send>
+        <endpoint>
+          <address method="GET" optimize="none" uri="http://localhost:5544/rest/Salesforce/airgas/virtualService/api/v1/accounts">
+            <timeout>
+              <duration>30</duration>
+              <action>fault</action>
+            </timeout>
+            <connect-timeout>
+              <duration>30</duration>
+            </connect-timeout>
+            <ssl-config>
+              <keyStoreAlias />
+              <keyAlias />
+            </ssl-config>
+          </address>
+        </endpoint>
+      </send>
+    </inSequence>
+    <outSequence>
+      <send />
+    </outSequence>
+    <faultSequence>
+      <makefault sendNativeProviderFault="true" version="pox">
+        <reason value="" />
+      </makefault>
+      <property name="RESPONSE" value="true" />
+      <send />
+    </faultSequence>
+  </definition>
+</service>

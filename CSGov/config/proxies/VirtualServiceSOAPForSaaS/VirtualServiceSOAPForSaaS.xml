@@ -1,0 +1,112 @@
+<service xmlns="http://ws.apache.org/ns/synapse" xmlns:mx="http://mediator.softwareag.com/custom" clientProduct="WST" clientVersion="9.12.0.0001-0277" cs_service_key="VirtualServiceSOAPForSaaS" name="CSGov.VirtualServiceSOAPForSaaS" style="SOAP" transports="http" type="virtual">
+  <resources>
+    <wsdl>
+      <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soapjms="http://www.w3.org/2010/soapjms/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://PTGHP450-AM/Salesforce.airgas.virtualService.soap.v1.accounts:accounts" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" name="CSGov.VirtualServiceSOAPForSaaS" targetNamespace="http://PTGHP450-AM/Salesforce.airgas.virtualService.soap.v1.accounts:accounts">
+        <wsdl:types>
+          <xsd:schema targetNamespace="http://PTGHP450-AM/Salesforce.airgas.virtualService.soap.v1.accounts:accounts">
+            <xsd:element name="getAccountsFromSAP" type="tns:getAccountsFromSAP" />
+            <xsd:element name="getAccountsFromSAPResponse" type="tns:getAccountsFromSAPResponse" />
+            <xsd:complexType name="getAccountsFromSAP">
+              <xsd:sequence>
+                <xsd:element name="accountId" nillable="true" type="xsd:string" />
+              </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="getAccountsFromSAPResponse">
+              <xsd:sequence>
+                <xsd:element maxOccurs="unbounded" name="accounts" nillable="true" type="tns:accounts" />
+              </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="accounts">
+              <xsd:sequence>
+                <xsd:element name="type" nillable="true" type="xsd:string" />
+                <xsd:element name="Id" nillable="true" type="xsd:string" />
+                <xsd:element name="Name" nillable="true" type="xsd:string" />
+                <xsd:element name="BillingStreet" nillable="true" type="xsd:string" />
+                <xsd:element name="BillingCity" nillable="true" type="xsd:string" />
+                <xsd:element name="BillingState" nillable="true" type="xsd:string" />
+                <xsd:element name="BillingPostalCode" nillable="true" type="xsd:string" />
+                <xsd:element name="BillingCountry" nillable="true" type="xsd:string" />
+                <xsd:element name="Phone" nillable="true" type="xsd:string" />
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:schema>
+        </wsdl:types>
+        <wsdl:message name="accounts_PortType_getAccountsFromSAPResponse">
+          <wsdl:part element="tns:getAccountsFromSAPResponse" name="parameters" />
+        </wsdl:message>
+        <wsdl:message name="accounts_PortType_getAccountsFromSAP">
+          <wsdl:part element="tns:getAccountsFromSAP" name="parameters" />
+        </wsdl:message>
+        <wsdl:portType name="accounts_PortType">
+          <wsdl:operation name="getAccountsFromSAP">
+            <wsdl:input message="tns:accounts_PortType_getAccountsFromSAP" />
+            <wsdl:output message="tns:accounts_PortType_getAccountsFromSAPResponse" />
+          </wsdl:operation>
+        </wsdl:portType>
+        <wsdl:binding name="Salesforce_airgas_virtualService_soap_v1_accounts_accounts_Binder" type="tns:accounts_PortType">
+          <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+          <wsdl:operation name="getAccountsFromSAP">
+            <soap:operation soapAction="Salesforce_airgas_virtualService_soap_v1_accounts_accounts_Binder_getAccountsFromSAP" style="document" />
+            <wsdl:input>
+              <soap:body parts="parameters" use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+              <soap:body parts="parameters" use="literal" />
+            </wsdl:output>
+          </wsdl:operation>
+        </wsdl:binding>
+        <wsdl:service name="CSGov.VirtualServiceSOAPForSaaS">
+          <wsdl:port binding="tns:Salesforce_airgas_virtualService_soap_v1_accounts_accounts_Binder" name="Salesforce_airgas_virtualService_soap_v1_accounts_accounts_Bindersoap11http">
+            <soap:address location="http://" />
+          </wsdl:port>
+        </wsdl:service>
+      </wsdl:definitions>
+    </wsdl>
+  </resources>
+  <definition>
+    <monitorPolicies>
+      <logInvocation name="Logging Policy">
+        <evaluation frequency="always" />
+        <reporting>
+          <destinations>
+            <localLog includeRequest="always" includeResponse="always" level="info" />
+          </destinations>
+        </reporting>
+      </logInvocation>
+    </monitorPolicies>
+    <inSequence>
+      <http-config>
+        <authentication mode="incoming" />
+        <headers />
+      </http-config>
+      <send>
+        <endpoint>
+          <address optimize="none" uri="http://PTGHP450-AM:5544/ws/Salesforce.airgas.virtualService.soap.v1.accounts:accounts/Salesforce_airgas_virtualService_soap_v1_accounts_accounts_Port">
+            <timeout>
+              <duration>30</duration>
+              <action>fault</action>
+            </timeout>
+            <connect-timeout>
+              <duration>30</duration>
+            </connect-timeout>
+            <ssl-config>
+              <keyStoreAlias />
+              <keyAlias />
+            </ssl-config>
+          </address>
+        </endpoint>
+      </send>
+    </inSequence>
+    <outSequence>
+      <send />
+    </outSequence>
+    <faultSequence>
+      <makefault sendNativeProviderFault="false" version="soap11">
+        <code xmlns:ns2="http://schemas.xmlsoap.org/soap/envelope" value="ns2:Server" />
+        <reason value="" />
+      </makefault>
+      <property name="RESPONSE" value="true" />
+      <send />
+    </faultSequence>
+  </definition>
+</service>

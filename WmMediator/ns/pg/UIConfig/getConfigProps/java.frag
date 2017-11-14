@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">getConfigProps</value>
+  <value name="subtype">unknown</value>
+  <value name="sigtype">java 3.5</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">CQkJT2JqZWN0IG8gPSBDb25maWdVdGlsLmdldEluc3RhbmNlKCkuZ2V0QmVhbigiZmlsZVByb3Bl
+cnRpZXNNYW5hZ2VyIik7DQoJCQkgIGlmIChvICE9IG51bGwgJiYgbyBpbnN0YW5jZW9mIEZpbGVQ
+cm9wZXJ0aWVzTWFuYWdlcikgew0KCQkJCSAgRmlsZVByb3BlcnRpZXNNYW5hZ2VyIG1nciA9IChG
+aWxlUHJvcGVydGllc01hbmFnZXIpIG87DQoJCQ0KCQkJCSAgbWdyLnNldFJlZnJlc2godHJ1ZSk7
+DQoJCQkJICBQcm9wZXJ0aWVzIHByb3BzID0gbWdyLmdldFByb3BlcnRpZXMoKTsNCgkJDQoJCQkJ
+ICBpZiAocHJvcHMgIT0gbnVsbCkgew0KCQkJCQkgIElEYXRhQ3Vyc29yIGRjID0gcGlwZWxpbmUu
+Z2V0Q3Vyc29yKCk7DQoJCQkJCSAgSURhdGFVdGlsLnJlbW92ZShkYywgQ1NSRkd1YXJkQ29uc3Rh
+bnRzLkNTUkZfVE9LRU4pOw0KCQkJCQkgIFNldDxNYXAuRW50cnk8T2JqZWN0LCBPYmplY3Q+PiBl
+bnRyaWVzID0gcHJvcHMuZW50cnlTZXQoKTsNCgkJCQkJICBmb3IgKE1hcC5FbnRyeSBlbnRyeSA6
+IGVudHJpZXMpIHsNCgkJCQkJCSAgU3RyaW5nIHBuYW1lID0gKFN0cmluZykgZW50cnkuZ2V0S2V5
+KCk7DQoJCQkJCQkgIFN0cmluZyBwdmFsID0gKFN0cmluZykgZW50cnkuZ2V0VmFsdWUoKTsNCgkJ
+DQoJCQkJCQkgIGRjLmluc2VydEFmdGVyKHBuYW1lLCBwdmFsKTsNCgkJCQkJICB9DQoJCQkJICB9
+IA0KCQkJICB9DQo=</value>
+</Values>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <record name="record" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_nsName">wmSalesforceConnector_v37.doctypes:Header_PackageVersionHeader</value>
+    <value name="node_pkg">wmSalesforceConnector_v37</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <value name="schemaDomain">com.softwareag.cloudstreams.salesforce_v37#SforceService</value>
+    <value name="field_min">1</value>
+    <value name="field_max">1</value>
+    <value name="field_enhanced">true</value>
+    <value name="field_is_attribute">false</value>
+    <value name="field_is_text">false</value>
+    <value name="field_is_xml_content">false</value>
+    <value name="any_mode">0</value>
+    <value name="role">0</value>
+    <value name="any_mode_uris"></value>
+    <value name="process">0</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">tns:PackageVersionHeader</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">false</value>
+        <value name="field_xmlns">urn:partner.soap.sforce.com</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="field_min">0</value>
+        <value name="field_max">1</value>
+        <value name="field_enhanced">true</value>
+        <value name="field_is_attribute">false</value>
+        <value name="field_is_text">false</value>
+        <value name="field_is_xml_content">false</value>
+        <value name="any_mode">0</value>
+        <value name="role">0</value>
+        <value name="any_mode_uris"></value>
+        <value name="process">0</value>
+        <array name="rec_fields" type="record" depth="1">
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">tns:packageVersions</value>
+            <value name="field_type">recref</value>
+            <value name="field_dim">1</value>
+            <value name="field_opt">true</value>
+            <value name="nillable">false</value>
+            <value name="field_xmlns">urn:partner.soap.sforce.com</value>
+            <value name="form_qualified">true</value>
+            <value name="is_global">false</value>
+            <value name="is_soap_array_encoding_used">false</value>
+            <value name="field_min">0</value>
+            <value name="field_max">-1</value>
+            <value name="field_enhanced">true</value>
+            <value name="field_is_attribute">false</value>
+            <value name="field_is_text">false</value>
+            <value name="field_is_xml_content">false</value>
+            <value name="any_mode">0</value>
+            <value name="role">0</value>
+            <value name="any_mode_uris"></value>
+            <value name="process">0</value>
+            <value name="rec_closed">true</value>
+            <value name="modifiable">true</value>
+            <value name="modelType">1</value>
+            <value name="preserveText">false</value>
+            <value name="namedText">false</value>
+            <value name="leadingText">false</value>
+            <value name="rec_ref">wmSalesforceConnector_v37.doctypes:docTypeRef_tns_PackageVersion</value>
+          </record>
+        </array>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="modelType">1</value>
+        <value name="preserveText">false</value>
+        <value name="namedText">false</value>
+        <value name="leadingText">false</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+    <value name="modelType">2</value>
+    <value name="preserveText">false</value>
+    <value name="namedText">false</value>
+    <value name="leadingText">false</value>
+  </record>
+</Values>

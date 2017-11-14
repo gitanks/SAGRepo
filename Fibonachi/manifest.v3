@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="enabled">yes</value>
+  <value name="system_package">no</value>
+  <value name="version">2.0</value>
+  <null name="startup_services"/>
+  <null name="shutdown_services"/>
+  <null name="replication_services"/>
+  <null name="requires"/>
+  <value name="listACL">Default</value>
+  <value name="webappLoad">yes</value>
+  <value name="name">Fibonachi</value>
+  <value name="build">1.0.194</value>
+  <null name="description"/>
+  <value name="time">2017-09-08 19:11:53 EDT</value>
+  <value name="jvm_version">1.8.0_45</value>
+  <value name="publisher">PTGHP450-AM</value>
+  <value name="patch_nums"></value>
+</Values>

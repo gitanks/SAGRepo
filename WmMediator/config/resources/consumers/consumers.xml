@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<consumers>
+    <consumer isDeleted="false" name="uddi:e06fef1d-bc3c-11e6-81bf-fa1c4b75ce23" key="uddi:e06fef1d-bc3c-11e6-81bf-fa1c4b75ce23" type="apiKey" isAccessTokenPresent="false">
+        <clientName>Sample</clientName>
+    </consumer>
+    <consumer isDeleted="false" name="uddi:a5ee368f-bd12-11e6-83ee-91d0c7b86f5d" key="uddi:a5ee368f-bd12-11e6-83ee-91d0c7b86f5d" type="apiKey" isAccessTokenPresent="false">
+        <clientName>DemoAPP</clientName>
+    </consumer>
+    <consumer isDeleted="false" name="uddi:b76df75c-bd66-11e6-83ee-c44f6695c6f1" key="uddi:b76df75c-bd66-11e6-83ee-c44f6695c6f1" type="apiKey" isAccessTokenPresent="false">
+        <clientName>Product</clientName>
+    </consumer>
+    <consumer isDeleted="false" name="uddi:a228b9df-fac1-11e6-a656-e749c2633f97" key="uddi:a228b9df-fac1-11e6-a656-e749c2633f97" type="apiKey" isAccessTokenPresent="false">
+        <clientName>Customer</clientName>
+    </consumer>
+    <consumer isDeleted="false" name="uddi:8243697e-bc42-11e6-81bf-d7c07c0fc506" key="uddi:8243697e-bc42-11e6-81bf-d7c07c0fc506" type="apiKey" isAccessTokenPresent="false">
+        <clientName>ChannelA</clientName>
+    </consumer>
+    <consumer isDeleted="false" name="uddi:67bf55b2-fac0-11e6-a656-c76329fe1c89" key="uddi:67bf55b2-fac0-11e6-a656-c76329fe1c89" type="apiKey" isAccessTokenPresent="false">
+        <clientName>Customer</clientName>
+    </consumer>
+</consumers>

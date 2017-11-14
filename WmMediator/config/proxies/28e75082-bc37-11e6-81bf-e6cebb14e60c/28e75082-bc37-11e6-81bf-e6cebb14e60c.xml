@@ -1,0 +1,73 @@
+<service xmlns="http://ws.apache.org/ns/synapse" xmlns:mx="http://mediator.softwareag.com/custom" cs_service_key="uddi:28e75082-bc37-11e6-81bf-e6cebb14e60c" name="WebAPI.api.message" system_version="1.0" transports="http" type="virtual" url="VirtualMessageAPI" vs_key="28e75082-bc37-11e6-81bf-e6cebb14e60c">
+    <resources>
+        <wsdl>
+            <wsdl:description xmlns:ns="http://axis2.apache.org" xmlns:tns="http://namespaces.DefaultOrganization.com/wsdl" xmlns:whttp="http://www.w3.org/ns/wsdl/http" xmlns:wrpc="http://www.w3.org/ns/wsdl/rpc" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsdl="http://www.w3.org/ns/wsdl" xmlns:wsdlx="http://www.w3.org/ns/wsdl-extensions" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://namespaces.DefaultOrganization.com/wsdl">
+  
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://axis2.apache.org"> 
+      <xs:element name="message"> 
+        <xs:complexType> 
+             <xs:sequence> 
+             </xs:sequence> 
+        </xs:complexType> 
+      </xs:element> 
+    </xs:schema> 
+  </wsdl:types>
+  
+  <wsdl:interface name="WebAPI.api.message_interface">
+    <wsdl:operation name="GET_message" pattern="http://www.w3.org/ns/wsdl/in-out" style="http://www.w3.org/ns/wsdl/style/rpc" wrpc:signature="name #in return #return "> 
+     	<wsdl:input element="ns:message" wsaw:Action="urn:message"/> 
+    </wsdl:operation>
+  </wsdl:interface>
+  
+  <wsdl:binding interface="tns:WebAPI.api.message_interface" name="WebAPI.api.message_binding" type="http://www.w3.org/ns/wsdl/http">
+    <wsdl:operation ref="tns:GET_message" whttp:location="/message" whttp:method="GET"/>
+  </wsdl:binding>
+  
+  <wsdl:service interface="tns:WebAPI.api.message_interface" name="WebAPI.api.message">
+    <wsdl:endpoint address="" binding="tns:WebAPI.api.message_binding" name="WebAPI.api.message_abstractEndpoint"/>
+  </wsdl:service>
+  
+</wsdl:description>
+        </wsdl>
+    </resources>
+    <definition>
+        <consumers/>
+        <monitorPolicies/>
+        <inSequence>
+            <enforcement-actions allow-anon="false">
+                <expressions>
+                    <expression>
+                        <params identify="strict" type="apiKey"/>
+                    </expression>
+                </expressions>
+            </enforcement-actions>
+            <http-config>
+                <authentication mode="anonymous"/>
+            </http-config>
+            <send>
+                <endpoint>
+                    <address isAlias="false" method="CUSTOM" uri="http://PTGHP450-AM:5544/rest/WebAPI/api/${sys:resource_path}">
+                        <connect-timeout>
+                            <duration>30</duration>
+                        </connect-timeout>
+                    </address>
+                </endpoint>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence>
+            <fault-criteria-any>
+                <fault-criteria-all>
+    <makefault version="pox">
+        <reason value=""/>
+    </makefault>
+</fault-criteria-all>
+            </fault-criteria-any>
+            <property name="RESPONSE" value="true"/>
+            <send/>
+        </faultSequence>
+    </definition>
+</service>

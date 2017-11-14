@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<services>
+    <cloudstreamsCollectionKeys serviceName="WmCloudStreams.SoapVS">
+        <servicesKeys>
+            <keyDetails collectionKey="Salesforce.airgas:createNewAccount" connectorServiceName="Salesforce.airgas:createNewAccount"/>
+            <keyDetails collectionKey="Salesforce.airgas:getAccountDetails" connectorServiceName="Salesforce.airgas:getAccountDetails"/>
+            <keyDetails collectionKey="StockQuote.airgas:getStockQuote" connectorServiceName="StockQuote.airgas:getStockQuote"/>
+        </servicesKeys>
+    </cloudstreamsCollectionKeys>
+    <cloudstreamsCollectionKeys serviceName="CSGov.CVS_SOAP_Accounts">
+        <servicesKeys>
+            <keyDetails collectionKey="Salesforce.airgas.connectorVirtualService:getAccount_WithClause" connectorServiceName="Salesforce.airgas.connectorVirtualService:getAccount_WithClause"/>
+        </servicesKeys>
+    </cloudstreamsCollectionKeys>
+</services>

@@ -1,0 +1,12 @@
+Connector-Bundle-Vendor: Software AG
+Connector-Bundle-Version: 1.0
+Manifest-Version: 1.2
+Connector-Descriptor-File: CC_StockQuote.xml
+Connector-Key: CC_StockQuote
+Connector-Version: 1.0
+Connector-Provider-Package: CloudConnector_01
+Connector-State: Enabled
+Connector-Handler: com.softwareag.cloudstreams.metadata.handler.wsdl11.WsdlConnectorMetadataHandler
+Connector-Name: StockQuote
+Connector-Group: CloudConnector_01
+Created-By: 9.12

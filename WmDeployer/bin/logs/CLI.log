@@ -1,0 +1,549 @@
+[ INFO] [10 Sep 2017 19:53:56,829] (ParseDeployerParams.java:validateCommandLineParametersForAction:3989)
+[[DEP.0100.5.56] Operation] [DEP.0100.5.23] Deploy Deployment Candidate
+
+[ INFO] [10 Sep 2017 19:53:56,830] (ParseDeployerParams.java:validateCommandLineParametersForAction:4062)
+[DEP.0100.5.62] -force flag is true
+
+[DEBUG] [10 Sep 2017 19:53:56,831] (ParseDeployerParams.java:validateCommandLineParametersForAction:5106)
+[Deployer] Exiting validateCommandLineParametersForAction(Args arg,	CommandLineParser parser)
+
+[DEBUG] [10 Sep 2017 19:53:56,856] (DeployerServiceUtils.java:deployAction:657)
+[Deployer] Entering deployAction(HashMap paramMap) Method
+
+[DEBUG] [10 Sep 2017 19:53:56,857] (DeployerServiceUtils.java:deployAction:660)
+[Deployer] Invoking Service wm.deployer.UIDeployer.deployToTargets on Deployer localhost:5555
+
+[DEBUG] [10 Sep 2017 19:53:56,858] (DeployerServiceUtils.java:deployAction:666)
+[Deployer] Service invoked by User Administrator
+
+[DEBUG] [10 Sep 2017 19:53:56,858] (DeployerServiceUtils.java:deployAction:668)
+[Deployer] Parameters to the service 
+
+[DEBUG] [10 Sep 2017 19:53:56,884] (DeployerServiceUtils.java:deployAction:680)
+[Deployer] 	project = Project
+
+[DEBUG] [10 Sep 2017 19:53:56,885] (DeployerServiceUtils.java:deployAction:680)
+[Deployer] 	deploymentName = myDeployment
+
+[DEBUG] [10 Sep 2017 19:53:56,886] (DeployerServiceUtils.java:deployAction:680)
+[Deployer] 	preDeployString = false
+
+[DEBUG] [10 Sep 2017 19:53:56,887] (DeployerServiceUtils.java:deployAction:680)
+[Deployer] 	force = true
+
+[DEBUG] [10 Sep 2017 19:53:56,888] (DeployerServiceUtils.java:deployAction:680)
+[Deployer] 	reportFilePath = C:/SoftwareAG/wM912/IntegrationServer/instances/default/replicate/inbound
+
+[DEBUG] [10 Sep 2017 19:53:56,888] (DeployerServiceUtils.java:executeService:1484)
+[Deployer] Entering executeService(String server, String user, String pwd, String packageStr, String service,IData inputDocument) Method
+
+[DEBUG] [10 Sep 2017 19:53:58,219] (DeployerServiceUtils.java:executeService:1535)
+[Deployer] Initiating connection Secure Socket Layer = false
+
+[DEBUG] [10 Sep 2017 19:53:58,380] (DeployerServiceUtils.java:executeService:1537)
+[Deployer] Connection Established Secure Socket Layer = false
+
+[DEBUG] [10 Sep 2017 19:53:58,381] (DeployerServiceUtils.java:executeService:1539)
+[Deployer] Executing Service wm.deployer.UIDeployer:deployToTargets Secure Socket Layer = false
+
+[DEBUG] [10 Sep 2017 19:53:58,637] (DeployerServiceUtils.java:executeService:1541)
+[Deployer] Completed Executing Service wm.deployer.UIDeployer:deployToTargets Secure Socket Layer = false
+
+[DEBUG] [10 Sep 2017 19:53:58,648] (DeployerServiceUtils.java:executeService:1577)
+[Deployer] Exiting executeService(String server, String user, String pwd, String packageStr, String service,IData inputDocument) Method
+
+[DEBUG] [10 Sep 2017 19:53:58,660] (DeployerServiceUtils.java:deployAction:710)
+[Deployer Service Status] Stature returned with status error
+
+[DEBUG] [10 Sep 2017 19:53:58,661] (DeployerServiceUtils.java:deployAction:714)
+[Deployer Service Status] Message = [DEP.0005.0199] Deployment failed.
+
+[DEBUG] [10 Sep 2017 19:53:58,662] (DeployerServiceUtils.java:deployAction:726)
+[Deployer] Exiting deployAction(HashMap paramMap) Method
+
+[DEBUG] [10 Sep 2017 19:53:58,663] (ParseDeployerParams.java:addStatusRecordToReport:5113)
+[Deployer] Entering addStatusRecordToReport(int errorCode, String message, boolean isUsageRecord) Method
+
+[DEBUG] [10 Sep 2017 19:53:58,666] (ParseDeployerParams.java:addStatusRecordToReport:5124)
+[Deployer] Exiting addStatusRecordToReport(int errorCode, String message, boolean isUsageRecord) Method
+
+[ INFO] [10 Sep 2017 19:53:58,670] (ParseDeployerParams.java:parse:1977)
+[[DEP.0100.4.01] Error -999][DEP.0100.-999] Service Error [DEP.0005.0199] Deployment failed.
+
+[ INFO] [10 Sep 2017 19:54:53,414] (MainClass.java:initializeLogger:60)
+Logging initialized.
+
+[DEBUG] [10 Sep 2017 19:54:53,510] (ParseDeployerParams.java:parse:65)
+[Deployer] Entering parse(String[] args) Method
+
+[ INFO] [10 Sep 2017 19:54:53,536] (ParseDeployerParams.java:parse:198)
+[[DEP.0100.5.56] Operation] [DEP.0100.5.03] Usage
+
+[DEBUG] [10 Sep 2017 19:54:53,538] (ParseDeployerParams.java:addStatusRecordToReport:5113)
+[Deployer] Entering addStatusRecordToReport(int errorCode, String message, boolean isUsageRecord) Method
+
+[DEBUG] [10 Sep 2017 19:54:53,555] (ParseDeployerParams.java:addStatusRecordToReport:5124)
+[Deployer] Exiting addStatusRecordToReport(int errorCode, String message, boolean isUsageRecord) Method
+
+[ INFO] [10 Sep 2017 19:54:54,209] (ParseDeployerParams.java:parse:207)
+[[DEP.0100.4.00] Success0]
+
+[ INFO] [10 Sep 2017 20:26:27,410] (MainClass.java:initializeLogger:60)
+Logging initialized.
+
+[DEBUG] [10 Sep 2017 20:26:27,534] (ParseDeployerParams.java:parse:65)
+[Deployer] Entering parse(String[] args) Method
+
+[ INFO] [10 Sep 2017 20:26:27,578] (ParseDeployerParams.java:parse:1736)
+[[DEP.0100.5.56] Operation] [DEP.0100.5.51] Import
+
+[DEBUG] [10 Sep 2017 20:26:27,579] (ParseDeployerParams.java:validateCommandLineParametersForAction:2553)
+[Deployer] Entering validateCommandLineParametersForAction(Args arg,	CommandLineParser parser)
+
+[ INFO] [10 Sep 2017 20:26:27,590] (ParseDeployerParams.java:validateCommandLineParametersForAction:2751)
+[5.59 - -100][DEP.0100.-100] -host parameter not specified
+
+[DEBUG] [10 Sep 2017 20:26:27,591] (ParseDeployerParams.java:validateCommandLineParametersForAction:2753)
+[Deployer] Into Host Checking if
+
+[DEBUG] [10 Sep 2017 20:26:27,593] (ParseDeployerParams.java:addStatusRecordToReport:5113)
+[Deployer] Entering addStatusRecordToReport(int errorCode, String message, boolean isUsageRecord) Method
+
+[DEBUG] [10 Sep 2017 20:26:27,597] (ParseDeployerParams.java:addStatusRecordToReport:5124)
+[Deployer] Exiting addStatusRecordToReport(int errorCode, String message, boolean isUsageRecord) Method
+
+[ INFO] [10 Sep 2017 20:26:27,600] (ParseDeployerParams.java:addStatusToReport:2540)
+[5.59 - -100][DEP.0100.-100] -host parameter not specified
+
+[DEBUG] [10 Sep 2017 20:26:27,602] (ParseDeployerParams.java:addStatusRecordToReport:5113)
+[Deployer] Entering addStatusRecordToReport(int errorCode, String message, boolean isUsageRecord) Method
+
+[DEBUG] [10 Sep 2017 20:26:27,604] (ParseDeployerParams.java:addStatusRecordToReport:5124)
+[Deployer] Exiting addStatusRecordToReport(int errorCode, String message, boolean isUsageRecord) Method
+
+[ INFO] [10 Sep 2017 20:26:59,245] (MainClass.java:initializeLogger:60)
+Logging initialized.
+
+[DEBUG] [10 Sep 2017 20:26:59,329] (ParseDeployerParams.java:parse:65)
+[Deployer] Entering parse(String[] args) Method
+
+[ INFO] [10 Sep 2017 20:26:59,347] (ParseDeployerParams.java:parse:2525)
+[5.59 -970] -host=localhost
+
+[DEBUG] [10 Sep 2017 20:26:59,349] (ParseDeployerParams.java:addStatusRecordToReport:5113)
+[Deployer] Entering addStatusRecordToReport(int errorCode, String message, boolean isUsageRecord) Method
+
+[DEBUG] [10 Sep 2017 20:26:59,360] (ParseDeployerParams.java:addStatusRecordToReport:5124)
+[Deployer] Exiting addStatusRecordToReport(int errorCode, String message, boolean isUsageRecord) Method
+
+[ INFO] [10 Sep 2017 20:29:34,953] (MainClass.java:initializeLogger:60)
+Logging initialized.
+
+[DEBUG] [10 Sep 2017 20:29:35,182] (ParseDeployerParams.java:parse:65)
+[Deployer] Entering parse(String[] args) Method
+
+[ INFO] [10 Sep 2017 20:29:35,217] (ParseDeployerParams.java:parse:198)
+[[DEP.0100.5.56] Operation] [DEP.0100.5.03] Usage
+
+[DEBUG] [10 Sep 2017 20:29:35,219] (ParseDeployerParams.java:addStatusRecordToReport:5113)
+[Deployer] Entering addStatusRecordToReport(int errorCode, String message, boolean isUsageRecord) Method
+
+[DEBUG] [10 Sep 2017 20:29:35,241] (ParseDeployerParams.java:addStatusRecordToReport:5124)
+[Deployer] Exiting addStatusRecordToReport(int errorCode, String message, boolean isUsageRecord) Method
+
+[ INFO] [10 Sep 2017 20:29:35,482] (ParseDeployerParams.java:parse:207)
+[[DEP.0100.4.00] Success0]
+
+[ INFO] [10 Sep 2017 20:31:10,697] (MainClass.java:initializeLogger:60)
+Logging initialized.
+
+[DEBUG] [10 Sep 2017 20:31:10,781] (ParseDeployerParams.java:parse:65)
+[Deployer] Entering parse(String[] args) Method
+
+[ INFO] [10 Sep 2017 20:31:10,800] (ParseDeployerParams.java:parse:2525)
+[5.59 -970] -password
+
+[DEBUG] [10 Sep 2017 20:31:10,806] (ParseDeployerParams.java:addStatusRecordToReport:5113)
+[Deployer] Entering addStatusRecordToReport(int errorCode, String message, boolean isUsageRecord) Method
+
+[DEBUG] [10 Sep 2017 20:31:10,819] (ParseDeployerParams.java:addStatusRecordToReport:5124)
+[Deployer] Exiting addStatusRecordToReport(int errorCode, String message, boolean isUsageRecord) Method
+
+[ INFO] [10 Sep 2017 20:32:42,129] (MainClass.java:initializeLogger:60)
+Logging initialized.
+
+[DEBUG] [10 Sep 2017 20:32:42,194] (ParseDeployerParams.java:parse:65)
+[Deployer] Entering parse(String[] args) Method
+
+[ INFO] [10 Sep 2017 20:32:42,211] (ParseDeployerParams.java:parse:2525)
+[5.59 -970] -password
+
+[DEBUG] [10 Sep 2017 20:32:42,215] (ParseDeployerParams.java:addStatusRecordToReport:5113)
+[Deployer] Entering addStatusRecordToReport(int errorCode, String message, boolean isUsageRecord) Method
+
+[DEBUG] [10 Sep 2017 20:32:42,224] (ParseDeployerParams.java:addStatusRecordToReport:5124)
+[Deployer] Exiting addStatusRecordToReport(int errorCode, String message, boolean isUsageRecord) Method
+
+[ INFO] [10 Sep 2017 20:32:57,573] (MainClass.java:initializeLogger:60)
+Logging initialized.
+
+[DEBUG] [10 Sep 2017 20:32:57,686] (ParseDeployerParams.java:parse:65)
+[Deployer] Entering parse(String[] args) Method
+
+[ INFO] [10 Sep 2017 20:32:57,703] (ParseDeployerParams.java:parse:1736)
+[[DEP.0100.5.56] Operation] [DEP.0100.5.51] Import
+
+[DEBUG] [10 Sep 2017 20:32:57,704] (ParseDeployerParams.java:validateCommandLineParametersForAction:2553)
+[Deployer] Entering validateCommandLineParametersForAction(Args arg,	CommandLineParser parser)
+
+[DEBUG] [10 Sep 2017 20:32:57,711] (ParseDeployerParams.java:validateCommandLineParametersForAction:2829)
+[Deployer] [Param Authentication] 
+
+[DEBUG] [10 Sep 2017 20:32:57,712] (ParseDeployerParams.java:validateCommandLineParametersForAction:2832)
+[Deployer] [Config File Parameters]isUserSpecifiedinConfigFile = false
+
+[DEBUG] [10 Sep 2017 20:32:57,713] (ParseDeployerParams.java:validateCommandLineParametersForAction:2835)
+[Deployer] [Config File Parameters]isPasswordSpecifiedinConfigFile = false
+
+[DEBUG] [10 Sep 2017 20:32:57,877] (ParseDeployerParams.java:validateCommandLineParametersForAction:2837)
+[Deployer] Operation invoked by User Administrator on Deployer localhost:5555
+
+[DEBUG] [10 Sep 2017 20:32:57,878] (ParseDeployerParams.java:printParamMap:5139)
+[Deployer][ParamMap] Key = port Value = 5555
+
+[DEBUG] [10 Sep 2017 20:32:57,879] (ParseDeployerParams.java:printParamMap:5139)
+[Deployer][ParamMap] Key = host Value = localhost
+
+[DEBUG] [10 Sep 2017 20:32:57,880] (ParseDeployerParams.java:printParamMap:5139)
+[Deployer][ParamMap] Key = action Value = import
+
+[DEBUG] [10 Sep 2017 20:32:57,882] (ParseDeployerParams.java:printParamMap:5136)
+[Deployer][ParamMap] Key = pwd.Value present but not shown.
+
+[DEBUG] [10 Sep 2017 20:32:57,883] (ParseDeployerParams.java:printParamMap:5139)
+[Deployer][ParamMap] Key = user Value = Administrator
+
+[DEBUG] [10 Sep 2017 20:32:57,884] (ParseDeployerParams.java:validateCommandLineParametersForAction:5106)
+[Deployer] Exiting validateCommandLineParametersForAction(Args arg,	CommandLineParser parser)
+
+[DEBUG] [10 Sep 2017 20:32:57,886] (ParseDeployerParams.java:addStatusRecordToReport:5113)
+[Deployer] Entering addStatusRecordToReport(int errorCode, String message, boolean isUsageRecord) Method
+
+[DEBUG] [10 Sep 2017 20:32:57,890] (ParseDeployerParams.java:addStatusRecordToReport:5124)
+[Deployer] Exiting addStatusRecordToReport(int errorCode, String message, boolean isUsageRecord) Method
+
+[ INFO] [10 Sep 2017 20:32:57,897] (ParseDeployerParams.java:parse:1770)
+[5.59 - -700][DEP.0100.-700] Invalid Command line parameters
+
+[ INFO] [10 Sep 2017 20:33:39,331] (MainClass.java:initializeLogger:60)
+Logging initialized.
+
+[DEBUG] [10 Sep 2017 20:33:39,389] (ParseDeployerParams.java:parse:65)
+[Deployer] Entering parse(String[] args) Method
+
+[ INFO] [10 Sep 2017 20:33:39,401] (ParseDeployerParams.java:parse:1736)
+[[DEP.0100.5.56] Operation] [DEP.0100.5.51] Import
+
+[DEBUG] [10 Sep 2017 20:33:39,402] (ParseDeployerParams.java:validateCommandLineParametersForAction:2553)
+[Deployer] Entering validateCommandLineParametersForAction(Args arg,	CommandLineParser parser)
+
+[DEBUG] [10 Sep 2017 20:33:39,407] (ParseDeployerParams.java:validateCommandLineParametersForAction:2829)
+[Deployer] [Param Authentication] 
+
+[DEBUG] [10 Sep 2017 20:33:39,408] (ParseDeployerParams.java:validateCommandLineParametersForAction:2832)
+[Deployer] [Config File Parameters]isUserSpecifiedinConfigFile = false
+
+[DEBUG] [10 Sep 2017 20:33:39,409] (ParseDeployerParams.java:validateCommandLineParametersForAction:2835)
+[Deployer] [Config File Parameters]isPasswordSpecifiedinConfigFile = false
+
+[DEBUG] [10 Sep 2017 20:33:39,420] (ParseDeployerParams.java:validateCommandLineParametersForAction:2837)
+[Deployer] Operation invoked by User Administrator on Deployer localhost:5555
+
+[DEBUG] [10 Sep 2017 20:33:39,422] (ParseDeployerParams.java:printParamMap:5139)
+[Deployer][ParamMap] Key = port Value = 5555
+
+[DEBUG] [10 Sep 2017 20:33:39,423] (ParseDeployerParams.java:printParamMap:5139)
+[Deployer][ParamMap] Key = host Value = localhost
+
+[DEBUG] [10 Sep 2017 20:33:39,423] (ParseDeployerParams.java:printParamMap:5139)
+[Deployer][ParamMap] Key = action Value = import
+
+[DEBUG] [10 Sep 2017 20:33:39,424] (ParseDeployerParams.java:printParamMap:5136)
+[Deployer][ParamMap] Key = pwd.Value present but not shown.
+
+[DEBUG] [10 Sep 2017 20:33:39,425] (ParseDeployerParams.java:printParamMap:5139)
+[Deployer][ParamMap] Key = user Value = Administrator
+
+[DEBUG] [10 Sep 2017 20:33:39,427] (ParseDeployerParams.java:validateCommandLineParametersForAction:5106)
+[Deployer] Exiting validateCommandLineParametersForAction(Args arg,	CommandLineParser parser)
+
+[DEBUG] [10 Sep 2017 20:33:39,428] (ParseDeployerParams.java:addStatusRecordToReport:5113)
+[Deployer] Entering addStatusRecordToReport(int errorCode, String message, boolean isUsageRecord) Method
+
+[DEBUG] [10 Sep 2017 20:33:39,431] (ParseDeployerParams.java:addStatusRecordToReport:5124)
+[Deployer] Exiting addStatusRecordToReport(int errorCode, String message, boolean isUsageRecord) Method
+
+[ INFO] [10 Sep 2017 20:33:39,436] (ParseDeployerParams.java:parse:1770)
+[5.59 - -700][DEP.0100.-700] Invalid Command line parameters
+
+[ INFO] [10 Sep 2017 21:45:16,165] (MainClass.java:initializeLogger:241)
+Logging initialized.
+
+[ INFO] [10 Sep 2017 21:45:16,353] (MainClass.java:main:172)
+No of command line arguments = 5
+
+[ INFO] [10 Sep 2017 21:45:16,354] (MainClass.java:main:174)
+Argument 0 = C:/Program Files (x86)/Jenkins/workspace/SAG_CICD_Demo/ProjectAutomator/SAG_CICD_DemoDeploymentSpec.xml
+
+[ INFO] [10 Sep 2017 21:45:16,355] (MainClass.java:main:174)
+Argument 1 = C:\SoftwareAG\wM912\IntegrationServer\instances\default\packages\WmDeployer\bin\\..\..\..\..\..\..\IntegrationServer\packages\WmDeployer\config\ProjectAutomatorForRuntime.xsd
+
+[ INFO] [10 Sep 2017 21:45:16,356] (MainClass.java:main:174)
+Argument 2 = C:\SoftwareAG\wM912\IntegrationServer\instances\default\packages\WmDeployer\bin\\..\..\..\..\..\..\IntegrationServer\packages\WmDeployer\config\ProjectAutomatorForRepository.xsd
+
+[ INFO] [10 Sep 2017 21:45:16,357] (MainClass.java:main:174)
+Argument 3 = C:\SoftwareAG\wM912\IntegrationServer\instances\default\packages\WmDeployer\bin\\..\..\..\..\..\..\IntegrationServer\packages\WmDeployer\bin\log4j.properties
+
+[ INFO] [10 Sep 2017 21:45:16,357] (MainClass.java:main:174)
+Argument 4 = 1
+
+[ INFO] [10 Sep 2017 21:45:16,405] (MainClass.java:main:202)
+Operating System on which ProjectAutomator is running is a WINDOWS or a WINDOWS Variant
+
+[ INFO] [10 Sep 2017 21:45:17,274] (MainClass.java:<init>:50)
+Started Operation of Deployer Test Suite
+
+[ INFO] [10 Sep 2017 21:45:28,664] (KeyObfuscator.java:decryptAndUnobfuscate:161)
+Successfully retrieved the key from the given obfuscated file.
+
+[ INFO] [10 Sep 2017 21:45:28,720] (KeyObfuscator.java:decryptAndUnobfuscate:161)
+Successfully retrieved the key from the given obfuscated file.
+
+[ INFO] [10 Sep 2017 21:45:28,916] (ProjectPlanExecutorXMLParser.java:getDeployerServerDetails:458)
+Using WmDeployer package on the Server localhost:5555 configured with the user Administrator
+
+[DEBUG] [10 Sep 2017 21:45:28,920] (ServerAlias.java:doesServerAliasExist:92)
+Checking if the  Server Alias testServer of pluginType IS&TN exists.
+
+[DEBUG] [10 Sep 2017 21:45:29,946] (DeployerUtil.java:createISServerAliases:181)
+Deleting IS Alias : aliasName = testServer@localhost:5555
+
+[ INFO] [10 Sep 2017 21:45:29,993] (DeployerUtil.java:createISServerAliases:184)
+Deleted IS Alias : aliasName = testServer@localhost:5555
+
+[DEBUG] [10 Sep 2017 21:45:29,996] (DeployerUtil.java:createISServerAliases:187)
+Creating IS Alias : aliasName = testServer@localhost:5555 with the user Administrator
+
+[ INFO] [10 Sep 2017 21:45:30,060] (KeyObfuscator.java:decryptAndUnobfuscate:161)
+Successfully retrieved the key from the given obfuscated file.
+
+[ INFO] [10 Sep 2017 21:45:30,110] (KeyObfuscator.java:decryptAndUnobfuscate:161)
+Successfully retrieved the key from the given obfuscated file.
+
+[ INFO] [10 Sep 2017 21:45:30,282] (DeployerUtil.java:createISServerAliases:212)
+Created IS Alias : aliasName = testServer@localhost:5555 with the user Administrator
+
+[DEBUG] [10 Sep 2017 21:45:30,285] (ISServerAlias.java:installDeployerResource:286)
+Installing WmDeployerResource on the IS Server Alias testServer
+
+[ INFO] [10 Sep 2017 21:45:32,629] (ISServerAlias.java:installDeployerResource:334)
+Installed WmDeployerResource on the IS Server Alias testServer
+
+[ INFO] [10 Sep 2017 21:45:32,631] (DeployerUtil.java:createISServerAliases:217)
+Pinging IS Server Alias testServer
+
+[DEBUG] [10 Sep 2017 21:45:32,632] (ISServerAlias.java:ping:379)
+Pinging  IS Server Alias testServer 
+
+[DEBUG] [10 Sep 2017 21:45:32,762] (ISServerAlias.java:ping:396)
+Successfully pinged testServer. pong
+
+[ INFO] [10 Sep 2017 21:45:32,763] (DeployerUtil.java:createISServerAliases:224)
+Successfully pinged Server Alias testServer.
+
+[DEBUG] [10 Sep 2017 21:45:32,771] (ServerAlias.java:doesServerAliasExist:92)
+Checking if the  Server Alias SAG_CICD_DemoRepo of pluginType Repository exists.
+
+[DEBUG] [10 Sep 2017 21:45:32,826] (DeployerUtil.java:createRepositoryServerAliases:1393)
+Deleting Repository Server Alias SAG_CICD_DemoRepo
+
+[ INFO] [10 Sep 2017 21:45:32,839] (DeployerUtil.java:createRepositoryServerAliases:1396)
+Deleted Repository Server Alias SAG_CICD_DemoRepo
+
+[DEBUG] [10 Sep 2017 21:45:32,840] (DeployerUtil.java:createRepositoryServerAliases:1399)
+Creating Repository Server Alias : aliasName = SAG_CICD_DemoRepo
+
+[ INFO] [10 Sep 2017 21:45:32,877] (DeployerUtil.java:createRepositoryServerAliases:1402)
+Created Repository Server Alias Alias : aliasName = SAG_CICD_DemoRepo
+
+[ INFO] [10 Sep 2017 21:45:32,966] (RepoAssetUtil.java:getRepositoryComposite:288)
+Adding asset Fibonachi from srcAlias=SAG_CICD_DemoRepo to Deployment Set myDeploymentSet
+
+[DEBUG] [10 Sep 2017 21:45:32,967] (RepoAssetUtil.java:getRepositoryComposite:291)
+SAG_CICD_DemoRepo$IS$Fibonachi$COMPOSITE_INCL
+
+[DEBUG] [10 Sep 2017 21:45:32,973] (ProjectPlanExecutorXMLParser.java:getProjectDetails:618)
+Deleting Project SAG_CICD_Demo
+
+[ INFO] [10 Sep 2017 21:45:33,081] (ProjectPlanExecutorXMLParser.java:getProjectDetails:621)
+Deleted Project SAG_CICD_Demo
+
+[ INFO] [10 Sep 2017 21:45:33,081] (ProjectPlanExecutorXMLParser.java:getProjectDetails:623)
+Creating Project SAG_CICD_Demo
+
+[ INFO] [10 Sep 2017 21:45:33,926] (ProjectPlanExecutorXMLParser.java:getProjectDetails:625)
+Created Project SAG_CICD_Demo
+
+[DEBUG] [10 Sep 2017 21:45:33,927] (DeploymentSet.java:create:181)
+Creating Deployment Set myDeploymentSet of type Repository for project SAG_CICD_Demo
+
+[ INFO] [10 Sep 2017 21:45:34,057] (DeploymentSet.java:create:210)
+Created Deployment Set myDeploymentSet of type Repository for project SAG_CICD_Demo
+
+[DEBUG] [10 Sep 2017 21:45:34,058] (DeploymentSet.java:updateSourceServerAliasToSets:380)
+Updating Source Server Aliases on Deployment Set myDeploymentSet of type Repository for project SAG_CICD_Demo
+
+[ INFO] [10 Sep 2017 21:45:34,150] (DeploymentSet.java:updateSourceServerAliasToSets:425)
+Updated Source Server Aliases on Deployment Set myDeploymentSet of type Repository for project SAG_CICD_Demo
+
+[DEBUG] [10 Sep 2017 21:45:34,150] (DeploymentSet.java:addRepoCompositesToDeploymentSet:2820)
+Adding Repository Objects to Deployment Set myDeploymentSet of type Repository for project SAG_CICD_Demo
+
+[ INFO] [10 Sep 2017 21:45:34,464] (DeploymentSet.java:addRepoCompositesToDeploymentSet:2849)
+Added Repository Objects to Deployment Set myDeploymentSet of type Repository for project SAG_CICD_Demo
+
+[ INFO] [10 Sep 2017 21:45:35,197] (DeploymentMap.java:create:78)
+Creating Deployment Map myDeploymentMap in Project SAG_CICD_Demo
+
+[ INFO] [10 Sep 2017 21:45:35,248] (DeploymentMap.java:create:98)
+Successfully created Deployment Map myDeploymentMap in Project SAG_CICD_Demo
+
+[ INFO] [10 Sep 2017 21:45:35,307] (DeploymentCandidate.java:create:87)
+Creating Deployment Candidate myDeployment with Deployment Map myDeploymentMap for project SAG_CICD_Demo
+
+[ INFO] [10 Sep 2017 21:45:35,680] (DeploymentCandidate.java:create:115)
+Successfully created Deployment Candidate myDeployment with Deployment Map myDeploymentMap for project SAG_CICD_Demo
+
+[ INFO] [10 Sep 2017 21:45:36,930] (XMLReport.java:runExample:41)
+Started Generating Report ... 
+
+[ INFO] [10 Sep 2017 21:45:36,931] (XMLReport.java:createDOMTree:88)
+Info Messages Size = 19
+
+[ INFO] [10 Sep 2017 21:45:36,932] (XMLReport.java:createDOMTree:89)
+Error Messages Size = 0
+
+[ INFO] [10 Sep 2017 21:45:37,068] (XMLReport.java:runExample:44)
+Generated Automation Test Suite Report file successfully.
+
+[ INFO] [10 Sep 2017 21:45:40,911] (MainClass.java:initializeLogger:60)
+Logging initialized.
+
+[DEBUG] [10 Sep 2017 21:45:40,970] (ParseDeployerParams.java:parse:65)
+[Deployer] Entering parse(String[] args) Method
+
+[ INFO] [10 Sep 2017 21:45:41,100] (ParseDeployerParams.java:parse:1942)
+[[DEP.0100.5.56] Operation] [DEP.0100.5.23] Deploy Deployment Candidate
+
+[DEBUG] [10 Sep 2017 21:45:41,101] (ParseDeployerParams.java:validateCommandLineParametersForAction:2553)
+[Deployer] Entering validateCommandLineParametersForAction(Args arg,	CommandLineParser parser)
+
+[DEBUG] [10 Sep 2017 21:45:41,105] (ParseDeployerParams.java:validateCommandLineParametersForAction:2829)
+[Deployer] [Param Authentication] 
+
+[DEBUG] [10 Sep 2017 21:45:41,105] (ParseDeployerParams.java:validateCommandLineParametersForAction:2832)
+[Deployer] [Config File Parameters]isUserSpecifiedinConfigFile = false
+
+[DEBUG] [10 Sep 2017 21:45:41,106] (ParseDeployerParams.java:validateCommandLineParametersForAction:2835)
+[Deployer] [Config File Parameters]isPasswordSpecifiedinConfigFile = false
+
+[DEBUG] [10 Sep 2017 21:45:41,116] (ParseDeployerParams.java:validateCommandLineParametersForAction:2837)
+[Deployer] Operation invoked by User Administrator on Deployer localhost:5555
+
+[DEBUG] [10 Sep 2017 21:45:41,116] (ParseDeployerParams.java:printParamMap:5139)
+[Deployer][ParamMap] Key = port Value = 5555
+
+[DEBUG] [10 Sep 2017 21:45:41,117] (ParseDeployerParams.java:printParamMap:5139)
+[Deployer][ParamMap] Key = host Value = localhost
+
+[DEBUG] [10 Sep 2017 21:45:41,117] (ParseDeployerParams.java:printParamMap:5139)
+[Deployer][ParamMap] Key = action Value = deploy
+
+[DEBUG] [10 Sep 2017 21:45:41,118] (ParseDeployerParams.java:printParamMap:5136)
+[Deployer][ParamMap] Key = pwd.Value present but not shown.
+
+[DEBUG] [10 Sep 2017 21:45:41,118] (ParseDeployerParams.java:printParamMap:5139)
+[Deployer][ParamMap] Key = user Value = Administrator
+
+[ INFO] [10 Sep 2017 21:45:41,119] (ParseDeployerParams.java:validateCommandLineParametersForAction:3989)
+[[DEP.0100.5.56] Operation] [DEP.0100.5.23] Deploy Deployment Candidate
+
+[ INFO] [10 Sep 2017 21:45:41,120] (ParseDeployerParams.java:validateCommandLineParametersForAction:4062)
+[DEP.0100.5.62] -force flag is true
+
+[DEBUG] [10 Sep 2017 21:45:41,120] (ParseDeployerParams.java:validateCommandLineParametersForAction:5106)
+[Deployer] Exiting validateCommandLineParametersForAction(Args arg,	CommandLineParser parser)
+
+[DEBUG] [10 Sep 2017 21:45:41,134] (DeployerServiceUtils.java:deployAction:657)
+[Deployer] Entering deployAction(HashMap paramMap) Method
+
+[DEBUG] [10 Sep 2017 21:45:41,135] (DeployerServiceUtils.java:deployAction:660)
+[Deployer] Invoking Service wm.deployer.UIDeployer.deployToTargets on Deployer localhost:5555
+
+[DEBUG] [10 Sep 2017 21:45:41,136] (DeployerServiceUtils.java:deployAction:666)
+[Deployer] Service invoked by User Administrator
+
+[DEBUG] [10 Sep 2017 21:45:41,151] (DeployerServiceUtils.java:deployAction:668)
+[Deployer] Parameters to the service 
+
+[DEBUG] [10 Sep 2017 21:45:41,163] (DeployerServiceUtils.java:deployAction:680)
+[Deployer] 	project = Project
+
+[DEBUG] [10 Sep 2017 21:45:41,164] (DeployerServiceUtils.java:deployAction:680)
+[Deployer] 	deploymentName = myDeployment
+
+[DEBUG] [10 Sep 2017 21:45:41,164] (DeployerServiceUtils.java:deployAction:680)
+[Deployer] 	preDeployString = false
+
+[DEBUG] [10 Sep 2017 21:45:41,165] (DeployerServiceUtils.java:deployAction:680)
+[Deployer] 	force = true
+
+[DEBUG] [10 Sep 2017 21:45:41,165] (DeployerServiceUtils.java:deployAction:680)
+[Deployer] 	reportFilePath = C:/SoftwareAG/wM912/IntegrationServer/instances/default/replicate/inbound
+
+[DEBUG] [10 Sep 2017 21:45:41,165] (DeployerServiceUtils.java:executeService:1484)
+[Deployer] Entering executeService(String server, String user, String pwd, String packageStr, String service,IData inputDocument) Method
+
+[DEBUG] [10 Sep 2017 21:45:42,182] (DeployerServiceUtils.java:executeService:1535)
+[Deployer] Initiating connection Secure Socket Layer = false
+
+[DEBUG] [10 Sep 2017 21:45:42,285] (DeployerServiceUtils.java:executeService:1537)
+[Deployer] Connection Established Secure Socket Layer = false
+
+[DEBUG] [10 Sep 2017 21:45:42,286] (DeployerServiceUtils.java:executeService:1539)
+[Deployer] Executing Service wm.deployer.UIDeployer:deployToTargets Secure Socket Layer = false
+
+[DEBUG] [10 Sep 2017 21:45:43,163] (DeployerServiceUtils.java:executeService:1541)
+[Deployer] Completed Executing Service wm.deployer.UIDeployer:deployToTargets Secure Socket Layer = false
+
+[DEBUG] [10 Sep 2017 21:45:43,294] (DeployerServiceUtils.java:executeService:1577)
+[Deployer] Exiting executeService(String server, String user, String pwd, String packageStr, String service,IData inputDocument) Method
+
+[DEBUG] [10 Sep 2017 21:45:43,294] (DeployerServiceUtils.java:deployAction:710)
+[Deployer Service Status] Stature returned with status error
+
+[DEBUG] [10 Sep 2017 21:45:43,295] (DeployerServiceUtils.java:deployAction:714)
+[Deployer Service Status] Message = [DEP.0005.0199] Deployment failed.
+
+[DEBUG] [10 Sep 2017 21:45:43,295] (DeployerServiceUtils.java:deployAction:726)
+[Deployer] Exiting deployAction(HashMap paramMap) Method
+
+[DEBUG] [10 Sep 2017 21:45:43,296] (ParseDeployerParams.java:addStatusRecordToReport:5113)
+[Deployer] Entering addStatusRecordToReport(int errorCode, String message, boolean isUsageRecord) Method
+
+[DEBUG] [10 Sep 2017 21:45:43,297] (ParseDeployerParams.java:addStatusRecordToReport:5124)
+[Deployer] Exiting addStatusRecordToReport(int errorCode, String message, boolean isUsageRecord) Method
+
+[ INFO] [10 Sep 2017 21:45:43,299] (ParseDeployerParams.java:parse:1977)
+[[DEP.0100.4.01] Error -999][DEP.0100.-999] Service Error [DEP.0005.0199] Deployment failed.
+

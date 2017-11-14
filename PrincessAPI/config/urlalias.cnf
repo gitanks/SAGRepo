@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="root">rest/api/v1/contacts</value>
+  <value name="Contacts">rest/api.v2.contacts</value>
+</Values>

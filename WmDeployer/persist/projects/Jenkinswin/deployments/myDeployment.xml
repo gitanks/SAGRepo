@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_101" class="java.beans.XMLDecoder">
+ <object class="com.wm.deployer.deploy.Deployment" id="Deployment0">
+  <void property="auditReports">
+   <void method="add">
+    <string>C:\SoftwareAG\wM912\IntegrationServer\instances\default\packages\WmDeployer\pub\projects\Jenkinswin\targets\myDeploymentMap\reports\myDeploymentMap_auditReport_1504295231386.xml</string>
+   </void>
+  </void>
+  <void property="buildName">
+   <string>Jenkinswin_1504295231354.build</string>
+  </void>
+  <void property="deployed">
+   <boolean>true</boolean>
+  </void>
+  <void property="deploymentId">
+   <string>698999ba-facc-48aa-bb81-4081894bc0d4</string>
+  </void>
+  <void property="deploymentMapName">
+   <string>myDeploymentMap</string>
+  </void>
+  <void property="description">
+   <string></string>
+  </void>
+  <void property="name">
+   <string>myDeployment</string>
+  </void>
+  <void property="projectName">
+   <string>Jenkinswin</string>
+  </void>
+  <void property="version">
+   <string>1.0</string>
+  </void>
+ </object>
+</java>

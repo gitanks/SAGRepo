@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 rel. 3 (http://www.altova.com) by PRINCESS CRUISES (PRINCESS CRUISES) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="GetListOfValuesRequest" type="GetListOfValuesRequestType"/>
+	<xs:element name="ListOfValues" type="GetListOfValuesResponseType"/>
+	<xs:complexType name="GetListOfValuesRequestType">
+		<xs:sequence>
+			<xs:element name="CruiseCompany" type="CruiseCompanydetailType"/>
+			<xs:element name="TypeCode" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="GetListOfValuesResponseType">
+		<xs:sequence>
+			<xs:element name="CruiseCompany" type="CruiseCompanydetailType"/>
+			<xs:element name="TypeCode" type="TypeCode" maxOccurs="unbounded"/>
+			<xs:element name="StatusResponse" type="StatusResponseType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CruiseCompanydetailType">
+		<xs:sequence>
+			<xs:element name="BookingCompanyCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="ProductCompanyCode" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="StatusResponseType">
+		<xs:sequence>
+			<xs:element name="Status" type="xs:string"/>
+			<xs:element name="TransactionId" type="xs:string" minOccurs="0"/>
+			<xs:element name="ReturnCode" type="xs:string"/>
+			<xs:element name="StatusCode" type="xs:string"/>
+			<xs:element name="StatusMessage" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TypeCode">
+		<xs:sequence>
+			<xs:element name="Value" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attribute name="Display"/>
+					<xs:attribute name="Name"/>
+					<xs:attribute name="Description"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="Description"/>
+	</xs:complexType>
+</xs:schema>

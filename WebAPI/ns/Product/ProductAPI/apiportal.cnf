@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<IDataXMLCoder version="1.0">
+  <record javaclass="com.wm.data.ISMemDataImpl">
+    <value name="http://PTGHP450-AM:18201:default">7d1fee51-bd65-11e6-1e80-0a0027000000</value>
+  </record>
+</IDataXMLCoder>

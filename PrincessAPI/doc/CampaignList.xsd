@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 rel. 3 (http://www.altova.com) by PRINCESS CRUISES (PRINCESS CRUISES) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="CampaignListRequest" type="CampaignListReq"/>
+	<xs:element name="CampaignListResponse" type="CampaignListResp"/>
+	<xs:complexType name="CampaignListReq">
+		<xs:sequence>
+			<xs:element name="CustomerList">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="CustomerID" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="CruiseCompany" type="CruiseCompanyDetailType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CampaignListResp">
+		<xs:sequence>
+			<xs:element name="Campaigns" type="campaignsType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CruiseCompanyDetailType">
+		<xs:annotation>
+			<xs:documentation>Cruise Company Type</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="BookingCompanyCode" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Cruise Company that makes booking</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ProductCompanyCode">
+				<xs:annotation>
+					<xs:documentation>Cruise Company that offers the product</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="campaignsType">
+		<xs:sequence>
+			<xs:element name="CustomerID" type="xs:string" minOccurs="0"/>
+			<xs:element name="CampaignCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="ExpirationDate" type="xs:string" minOccurs="0"/>
+			<xs:element name="CampaignCategory" type="xs:string" minOccurs="0"/>
+			<xs:element name="CampaignType" type="xs:string" minOccurs="0"/>
+			<xs:element name="Description" type="xs:string" minOccurs="0"/>
+			<xs:element name="DropDate" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,71 @@
+<service xmlns="http://ws.apache.org/ns/synapse" xmlns:mx="http://mediator.softwareag.com/custom" clientProduct="WST" clientVersion="9.12.0.0001-0277" cs_service_key="CVS_SOAP_Accounts" name="CSGov.CVS_SOAP_Accounts" style="SOAP" transports="local" type="virtual">
+  <resources>
+    <wsdl>
+      <wsdl:description xmlns:wsdl="http://www.w3.org/ns/wsdl" xmlns:tns="http://namespaces.DefaultOrganization.com/wsdl" xmlns:whttp="http://www.w3.org/ns/wsdl/http" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsdlx="http://www.w3.org/ns/wsdl-extensions" targetNamespace="http://namespaces.DefaultOrganization.com/wsdl">
+        <wsdl:types />
+        <wsdl:interface name="CVS_SOAP_Accounts_interface">
+          <wsdl:operation name="invoke" pattern="http://www.w3.org/ns/wsdl/in-out" />
+        </wsdl:interface>
+        <wsdl:binding interface="tns:CVS_SOAP_Accounts_interface" name="CVS_SOAP_Accounts_binding" type="http://www.w3.org/ns/wsdl/http">
+          <wsdl:operation ref="tns:invoke" whttp:location="invoke" whttp:method="POST" />
+        </wsdl:binding>
+        <wsdl:service interface="tns:CVS_SOAP_Accounts_interface" name="CSGov.CVS_SOAP_Accounts">
+          <wsdl:endpoint address="" binding="tns:CVS_SOAP_Accounts_binding" name="CVS_SOAP_Accounts_abstractEndpoint" />
+        </wsdl:service>
+      </wsdl:description>
+    </wsdl>
+  </resources>
+  <definition>
+    <monitorPolicies>
+      <monitor name="ThrottlingPolicy-HardLimit">
+        <evaluation scope="CollectionKey">
+          <rules>
+            <rule operator="GT" reading="requestCount">2</rule>
+          </rules>
+          <alert frequency="always" interval="1">Hardlimit of 2 exceeded</alert>
+        </evaluation>
+        <enforcement>
+          <rejection code="503" />
+        </enforcement>
+        <reporting>
+          <destinations>
+            <jdbc includeRequest="always" includeResponse="always" />
+            <localLog includeRequest="always" includeResponse="always" level="info" />
+          </destinations>
+        </reporting>
+      </monitor>
+      <monitor name="ThrottlingPolicy-SoftLimit">
+        <evaluation scope="CollectionKey">
+          <rules>
+            <rule operator="GT" reading="requestCount">1</rule>
+          </rules>
+          <alert frequency="always" interval="1">Softlimit of 1 reached</alert>
+        </evaluation>
+        <reporting>
+          <destinations>
+            <jdbc includeRequest="always" includeResponse="always" />
+            <localLog includeRequest="always" includeResponse="always" level="info" />
+          </destinations>
+        </reporting>
+      </monitor>
+    </monitorPolicies>
+    <inSequence>
+      <send>
+        <endpoint>
+          <cloud xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string" />
+        </endpoint>
+      </send>
+    </inSequence>
+    <outSequence>
+      <send />
+    </outSequence>
+    <faultSequence>
+      <makefault sendNativeProviderFault="true" version="soap11">
+        <code xmlns:ns2="http://schemas.xmlsoap.org/soap/envelope" value="ns2:Server" />
+        <reason value="$ERROR_MESSAGE" />
+      </makefault>
+      <property name="RESPONSE" value="true" />
+      <send />
+    </faultSequence>
+  </definition>
+</service>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="repository-deploySimulateRollback.xsl"?><Report projectType="Repository" status="1" type="Deploy">
+<depCandidate>myDeployment</depCandidate>
+<depMapName>myDeploymentMap</depMapName>
+<projectDescription/>
+<startTime>2017-09-01 15:47:11 EDT</startTime>
+<projectName>Jenkinswin</projectName>
+<user>Administrator</user>
+<messages>
+<message timeStamp="2017-09-01 15:47:11 EDT" type="MESSAGE">
+<messagebody>[DEP.0005.1168] Deleted previously delivered artifacts successfully for IS.</messagebody>
+<attributes>
+<targetserver name="testServer"/>
+</attributes>
+</message>
+<message timeStamp="2017-09-01 15:47:11 EDT" type="MESSAGE">
+<messagebody>[DEP.0005.1164] Artifacts delivered successfully to IS.</messagebody>
+<attributes>
+<targetserver name="testServer"/>
+</attributes>
+</message>
+<message timeStamp="2017-09-01 15:47:11 EDT" type="WARNING">
+<messagebody>JVM: "1.8.0_101 (52.0)" of the target Integration Server for installing package: "Fibonachi" is older than the recommended JVM: "1.8.0_45".</messagebody>
+<attributes>
+<targetserver name="testServer"/>
+<asset name="Fibonachi" type="ispackage"/>
+</attributes>
+</message>
+<message timeStamp="2017-09-01 15:47:11 EDT" type="SUCCESS">
+<messagebody>Fibonachi package installed and activated. The original package has been moved to package recovery area. Package has been moved to archive area as Fibonachi.zip_20170901154711.</messagebody>
+<attributes>
+<targetserver name="testServer"/>
+<asset name="Fibonachi" type="ispackage"/>
+</attributes>
+</message>
+</messages>
+<endTime>2017-09-01 15:47:11 EDT</endTime>
+</Report>

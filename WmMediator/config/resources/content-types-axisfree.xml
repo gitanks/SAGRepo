@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<content-types xmlns="http://contentTypes.mediator.softwareag">
+	<!-- Please enter the content-types 
+	<content-type type="xml">
+	 <name></name>
+	</content-type>
+	-->
+	
+	<content-type type="json">
+	 <name>application/json</name>
+	</content-type>
+	<content-type type="xml">
+	 <name>application/xml</name>
+	</content-type>
+	<content-type type="url-encoded">
+	 <name>application/x-www-form-urlencoded</name>
+	</content-type>	
+	<content-type type="json-badgerfish">
+	  <name>application/json/badgerfish</name>
+	</content-type>			
+</content-types>
+	

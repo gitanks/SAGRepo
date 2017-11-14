@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2016 (http://www.altova.com) by Anks M (ProSoft) -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="CruiseHistoryResponseType">
+		<xsd:sequence>
+			<xsd:element name="Id">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:whiteSpace value="preserve"/>
+						<xsd:maxLength value="10"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="Bookings" maxOccurs="unbounded">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Voyage">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:string">
+									<xsd:whiteSpace value="preserve"/>
+									<xsd:maxLength value="5"/>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+						<xsd:element name="CruiseDuration">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:string">
+									<xsd:whiteSpace value="preserve"/>
+									<xsd:maxLength value="3"/>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+						<xsd:element name="ShipName">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:string">
+									<xsd:whiteSpace value="preserve"/>
+									<xsd:maxLength value="20"/>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+						<xsd:element name="SailDate" type="xsd:date"/>
+						<xsd:element name="CruiseDestination">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:string">
+									<xsd:whiteSpace value="preserve"/>
+									<xsd:maxLength value="3"/>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+						<xsd:element name="CruiseMetaCategory">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:string">
+									<xsd:whiteSpace value="preserve"/>
+									<xsd:maxLength value="1"/>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+						<xsd:element name="BookingStatus">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:string">
+									<xsd:whiteSpace value="preserve"/>
+									<xsd:maxLength value="1"/>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+						<xsd:element name="ProductCompanyCode">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:string">
+									<xsd:whiteSpace value="preserve"/>
+									<xsd:maxLength value="2"/>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+						<xsd:element name="BookingNumber" type="xsd:string"/>
+						<xsd:element name="BookingDate" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="BookingOccupancy" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="LoyaltyCredit" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="SyntheticCruiseFlag" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="ProductCode" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="SuiteNum" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="NetFare" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="InsuranceFlag" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="AirFlag" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="PricingType" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="AirCity" type="xsd:string" minOccurs="0"/>
+                        <xsd:element name="AgencyID" type="xsd:string" minOccurs="0"/>
+                        <xsd:element name="TourDuration" type="xsd:string" minOccurs="0"/>
+                         <xsd:element name="InsuranceType" type="xsd:string" minOccurs="0"/>
+                         <xsd:element name="DiningCode" type="xsd:string" minOccurs="0"/>
+                         <xsd:element name="DiningTableSize" type="xsd:string" minOccurs="0"/>
+                         <xsd:element name="BedConfig" type="xsd:string" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="CruiseHistoryResponse" type="CruiseHistoryResponseType"/>
+	<xsd:element name="CruiseHistoryRequest" type="CruiseHistoryRequestType"/>
+	<xsd:complexType name="CruiseHistoryRequestType">
+		<xsd:sequence>
+			<xsd:element name="CruiseCompany" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="BookingCompanyCode" minOccurs="0">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:string">
+									<xsd:whiteSpace value="preserve"/>
+									<xsd:maxLength value="2"/>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+						<xsd:element name="ProductCompanyCode">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:string">
+									<xsd:whiteSpace value="preserve"/>
+									<xsd:maxLength value="2"/>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="CustomerId" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

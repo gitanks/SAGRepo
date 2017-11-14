@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2016 (http://www.altova.com) by Anil Kumar (Prosoftgroup) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" attributeFormDefault="unqualified">
+	<xs:complexType name="LastCruiseType">
+		<xs:sequence>
+			<xs:element name="LastCruiseShip">
+				<xs:annotation>
+					<xs:documentation>Last Cruise Ship</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="LastSailDate" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Last Cruise Sail Date</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LastCruiseDuration">
+				<xs:annotation>
+					<xs:documentation>Last Cruise Duration</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="LastCruiseDestination">
+				<xs:annotation>
+					<xs:documentation>Last Cruise Destination</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="LastCruiseMetaCategory">
+				<xs:annotation>
+					<xs:documentation>Last Cruise Meta Catagory</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="LastShipName">
+				<xs:annotation>
+					<xs:documentation>Last Cruise Ship Full Name</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="LastBookingStatus" type="xs:string"/>
+			<xs:element name="LastDiningPreference" type="xs:string" minOccurs="0"/>
+			<xs:element name="LastDiningTableNum" type="xs:string" minOccurs="0"/>
+			<xs:element name="LastDiningTableSize" type="xs:string" minOccurs="0"/>
+			<xs:element name="LastAgencyID" type="xs:string" minOccurs="0"/>
+			<xs:element name="LastBedConfig" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="FirstCruiseType">
+		<xs:sequence>
+			<xs:element name="FirstSailDate" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ContactSummaryResponse" type="ContactSummaryResponseType"/>
+	<xs:element name="ContactSummaryRequest" type="ContactSummaryRequestType">
+		<xs:annotation>
+			<xs:documentation>Customer Contact Definition</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="ContactSummaryRequestType">
+		<xs:annotation>
+			<xs:documentation>Contact Summary Request</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CruiseCompany" type="CruiseCompanyDetailType" minOccurs="0"/>
+			<xs:element name="CustomerId">
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="FormCode" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ContactSummaryResponseType">
+		<xs:annotation>
+			<xs:documentation>Contact Summary Response</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Id">
+				<xs:annotation>
+					<xs:documentation>CCN#</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Name" type="NameDetailType"/>
+			<xs:element name="PersonalDetails" type="PersonalDetailType"/>
+			<xs:element name="PassportDetails" type="PassportDetailType"/>
+			<xs:element name="TravelAgentInd" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Travel Agent Indicator</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Address" type="AddressDetailType"/>
+			<xs:element name="Email" type="EmailType" minOccurs="0"/>
+			<xs:element name="Telephone" type="TelephoneType" minOccurs="0"/>
+			<xs:element name="CruiseHistorySummary" type="CruiseHistorySummaryType"/>
+			<xs:element name="ContactPreferences" type="ContactPreferencesDetailType" minOccurs="0"/>
+			<xs:element name="MergeIndicator" minOccurs="0"/>
+			<xs:element name="PassengerStatus" minOccurs="0"/>
+			<xs:element name="LoyaltyLevel" minOccurs="0"/>
+			<xs:element name="GatewayCity" minOccurs="0"/>
+			<xs:element name="BlacklistIndicator" minOccurs="0"/>
+			<xs:element name="LastUpdated" minOccurs="0"/>
+			<xs:element name="LastUpdatedBy" minOccurs="0"/>
+			<xs:element name="MailBrochureInProgress" minOccurs="0"/>
+			<xs:element name="FutureBooked" minOccurs="0"/>
+			<xs:element name="CVPName" type="xs:string" minOccurs="0"/>
+            <xs:element name="CVPPhone" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CruiseCompanyDetailType">
+		<xs:annotation>
+			<xs:documentation>Cruise Company Type</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="BookingCompanyCode" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Cruise Company that makes booking</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ProductCompanyCode">
+				<xs:annotation>
+					<xs:documentation>Cruise Company that offers the product</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="NameDetailType">
+		<xs:annotation>
+			<xs:documentation>Name Detail Type</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="LastName" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Last Name</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Suffix" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Suffix</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FirstName" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>First Name</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="MiddleName" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Middle Name</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Title" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Title</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ContactStatus" type="xs:string" minOccurs="0"/>
+			<xs:element name="PreferredLastName" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="PreferredNameIndicator" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="FullName" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PersonalDetailType">
+		<xs:annotation>
+			<xs:documentation>Personal Detail Type</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Gender" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Gender</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Age" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Age</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="BirthDate" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Date of Birth</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="MaritalStatus" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Marital Status</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="OccupationCode" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Occupational Code</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="OccupationDescription" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Brief Description of Occupation</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="RetiredFlag" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Retired Flag</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CountryOfCitizenship" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Country of Citizenship</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CountryOfBirth" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Country of Birth</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="PlaceOfBirth" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Place of Birth</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CountryOfResidency" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="AnniversaryDate" minOccurs="0"/>
+			<xs:element name="NationalityCode" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PassportDetailType">
+		<xs:annotation>
+			<xs:documentation>Passport Detail Type</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="PassportNumber" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Passport Number</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="DateOfIssue" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Passport - Date of Issue</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="DateOfExpiration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Passport - Date of Expiry</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="PlaceOfIssue" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Passport - Place of Issue</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CountryOfIssue" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Passport - Country</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="AlienResidentId" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Alien Resident Id</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="PassportFullName" minOccurs="0"/>
+			<xs:element name="IssuingAuthorityLocation" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AddressDetailType">
+		<xs:annotation>
+			<xs:documentation>Address Detail Type</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Address1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Address Line 1</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Address2" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Address Line 2</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Address3" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Address Line 3</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="HouseName" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>House Number</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="City" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>City</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="StateOrCounty" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>State / County</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="PostCode" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Postal Code / Zip Code</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Country" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Country</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="DeliveryPointBarCode" minOccurs="0"/>
+			<xs:element name="CarrierRoute" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CruiseHistorySummaryType">
+		<xs:annotation>
+			<xs:documentation>Cruise History Summary Type</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="TransAtlanticCRZ">
+				<xs:annotation>
+					<xs:documentation>Trans Atlantic Cruises</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CruiseDays">
+				<xs:annotation>
+					<xs:documentation>Cruise Days</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="5"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="WorldMaxDays">
+				<xs:annotation>
+					<xs:documentation>CU Max World Cruise Days</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="NbrOfCruises">
+				<xs:annotation>
+					<xs:documentation>Number of Cruises</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="3"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="LoyaltyCode">
+				<xs:annotation>
+					<xs:documentation>Loyalty Program Code</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="GrandCruiseCount" type="xs:string" minOccurs="0"/>
+			<xs:element name="TotalFare" type="xs:string" minOccurs="0"/>
+			<xs:element name="FirstCruise" type="FirstCruiseType"/>
+			<xs:element name="LastCruise" type="LastCruiseType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ContactPreferencesDetailType">
+		<xs:annotation>
+			<xs:documentation>ECContactPreferencesDetailType</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ExpressedConsent" minOccurs="0"/>
+			<xs:element name="CPPhoneCode" minOccurs="0"/>
+			<xs:element name="CPMailCode" minOccurs="0"/>
+			<xs:element name="CPEmailCode" minOccurs="0"/>
+			<xs:element name="DoNotShare" minOccurs="0"/>
+			<xs:element name="PhoneCodeDate" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EmailType">
+		<xs:sequence>
+			<xs:element name="Email" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Email Address</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TelephoneType">
+		<xs:sequence>
+			<xs:element name="Phone" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Phone Number</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Mobile" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Cell Phone Number</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Fax" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Fax Number</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

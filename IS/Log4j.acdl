@@ -1,0 +1,182 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="Log4j" runtimeVersion="9.12.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="9.12.17" />
+  <buildInfo name="BuildTimestamp" value="2017-09-10T10:40:38" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="9.12.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="disallowActivePackageInstall">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="packageExecutionCheck">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types To Broker During Deployment">
+    <value>true</value>
+  </property>
+  <asset name="ISPackage.Log4j" displayName="Log4j">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="Log4j.base.util.logStartup" displayName="Log4j.base.util:logStartup">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:Log4j.code.source.Log4j.base.util.java</dependsOn>
+    <dependsOn>IS:Log4j.code.classes.Log4j.base.util.class</dependsOn>
+    <dependsOn>IS:Log4j.base.util.logDetails</dependsOn>
+  </asset>
+  <asset name="Log4j.base.util.logDetails" displayName="Log4j.base.util:logDetails">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:Log4j.code.source.Log4j.base.util.java</dependsOn>
+    <dependsOn>IS:Log4j.code.classes.Log4j.base.util.class</dependsOn>
+    <dependsOn>IS:Log4j.base.util.logStartup</dependsOn>
+  </asset>
+  <asset name="Log4j.base.services.byLogLevel.logLevel" displayName="Log4j.base.services.byLogLevel:logLevel">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:Log4j.code.source.Log4j.base.services.byLogLevel.java</dependsOn>
+    <dependsOn>IS:Log4j.code.classes.Log4j.base.services.byLogLevel.class</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logWarning</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logFatal</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logDebug</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logInfo</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logError</dependsOn>
+  </asset>
+  <asset name="Log4j.base.services.byLogLevel.logWarning" displayName="Log4j.base.services.byLogLevel:logWarning">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:Log4j.code.source.Log4j.base.services.byLogLevel.java</dependsOn>
+    <dependsOn>IS:Log4j.code.classes.Log4j.base.services.byLogLevel.class</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logLevel</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logFatal</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logDebug</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logInfo</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logError</dependsOn>
+  </asset>
+  <asset name="Log4j.base.services.byLogLevel.logFatal" displayName="Log4j.base.services.byLogLevel:logFatal">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:Log4j.code.source.Log4j.base.services.byLogLevel.java</dependsOn>
+    <dependsOn>IS:Log4j.code.classes.Log4j.base.services.byLogLevel.class</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logLevel</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logWarning</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logDebug</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logInfo</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logError</dependsOn>
+  </asset>
+  <asset name="Log4j.base.services.byLogLevel.logDebug" displayName="Log4j.base.services.byLogLevel:logDebug">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:Log4j.code.source.Log4j.base.services.byLogLevel.java</dependsOn>
+    <dependsOn>IS:Log4j.code.classes.Log4j.base.services.byLogLevel.class</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logLevel</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logWarning</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logFatal</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logInfo</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logError</dependsOn>
+  </asset>
+  <asset name="Log4j.base.services.byLogLevel.logInfo" displayName="Log4j.base.services.byLogLevel:logInfo">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:Log4j.code.source.Log4j.base.services.byLogLevel.java</dependsOn>
+    <dependsOn>IS:Log4j.code.classes.Log4j.base.services.byLogLevel.class</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logLevel</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logWarning</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logFatal</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logDebug</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logError</dependsOn>
+  </asset>
+  <asset name="Log4j.base.services.byLogLevel.logError" displayName="Log4j.base.services.byLogLevel:logError">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:Log4j.code.source.Log4j.base.services.byLogLevel.java</dependsOn>
+    <dependsOn>IS:Log4j.code.classes.Log4j.base.services.byLogLevel.class</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logLevel</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logWarning</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logFatal</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logDebug</dependsOn>
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logInfo</dependsOn>
+  </asset>
+  <asset name="Log4j.base.services.logMessage" displayName="Log4j.base.services:logMessage">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Log4j.base.services.byLogLevel.logLevel</dependsOn>
+    <dependsOn>IS:Log4j.base.util.logDetails</dependsOn>
+  </asset>
+  <asset name="Log4j.base.sample.purchaseOrder" displayName="Log4j.base.sample:purchaseOrder">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="Log4j.base.sample.log4j2Sample" displayName="Log4j.base.sample:log4j2Sample">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Log4j.base.sample.purchaseOrder</dependsOn>
+    <dependsOn>IS:ps.util.system.getServiceName</dependsOn>
+    <dependsOn>IS:ps.util.system.generateUUID</dependsOn>
+    <dependsOn>IS:Log4j.base.services.logMessage</dependsOn>
+  </asset>
+  <asset name="Log4j.base.sample.log4j2SampleFailure" displayName="Log4j.base.sample:log4j2SampleFailure">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Log4j.base.sample.purchaseOrder</dependsOn>
+    <dependsOn>IS:ps.util.system.getServiceName</dependsOn>
+    <dependsOn>IS:ps.util.system.generateUUID</dependsOn>
+    <dependsOn>IS:Log4j.base.services.logMessage</dependsOn>
+    <dependsOn>IS:PSUtilities.misc.throwError</dependsOn>
+  </asset>
+  <asset name="Log4j.base.sample.log4j2Orchestration" displayName="Log4j.base.sample:log4j2Orchestration">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Log4j.base.sample.purchaseOrder</dependsOn>
+    <dependsOn>IS:ps.util.system.getServiceName</dependsOn>
+    <dependsOn>IS:ps.util.system.generateUUID</dependsOn>
+    <dependsOn>IS:Log4j.base.services.logMessage</dependsOn>
+  </asset>
+  <asset name="Log4j.base.init.loggerStartup_dontRun" displayName="Log4j.base.init:loggerStartup_dontRun">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Log4j.base.util.logStartup</dependsOn>
+  </asset>
+  <asset name="Log4j.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Log4j.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Log4j.code.classes.Log4j.base.services.byLogLevel.class" displayName="code/classes/Log4j/base/services/byLogLevel.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="Log4j.code.classes.Log4j.base.util.class" displayName="code/classes/Log4j/base/util.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="Log4j.code.classes.log4j2.xml" displayName="code/classes/log4j2.xml">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="Log4j.code.classes.log4j2_bkup.xml" displayName="code/classes/log4j2_bkup.xml">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="Log4j.code.classes.pom.xml" displayName="code/classes/pom.xml">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="Log4j.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Log4j.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Log4j.code.source.Log4j.base.services.byLogLevel.java" displayName="code/source/Log4j/base/services/byLogLevel.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="Log4j.code.source.Log4j.base.util.java" displayName="code/source/Log4j/base/util.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="Log4j.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Log4j.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+

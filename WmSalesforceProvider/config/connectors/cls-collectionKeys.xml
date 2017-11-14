@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<services>
+    <cloudstreamsCollectionKeys serviceName="WmCloudStreams.SoapVS">
+        <servicesKeys>
+            <keyDetails collectionKey="wmSalesforceConnector_v25.lookup.interactions:describeGlobal" connectorServiceName="wmSalesforceConnector_v25.lookup.interactions:describeGlobal"/>
+            <keyDetails collectionKey="wmSalesforceConnector_v25.lookup.interactions:describeSObject" connectorServiceName="wmSalesforceConnector_v25.lookup.interactions:describeSObject"/>
+            <keyDetails collectionKey="wmSalesforceConnector_v29.lookup.interactions:describeGlobal" connectorServiceName="wmSalesforceConnector_v29.lookup.interactions:describeGlobal"/>
+            <keyDetails collectionKey="wmSalesforceConnector_v29.lookup.interactions:describeSObject" connectorServiceName="wmSalesforceConnector_v29.lookup.interactions:describeSObject"/>
+            <keyDetails collectionKey="wmSalesforceConnector_v31.lookup.interactions:describeGlobal" connectorServiceName="wmSalesforceConnector_v31.lookup.interactions:describeGlobal"/>
+            <keyDetails collectionKey="wmSalesforceConnector_v31.lookup.interactions:describeSObject" connectorServiceName="wmSalesforceConnector_v31.lookup.interactions:describeSObject"/>
+            <keyDetails collectionKey="wmSalesforceConnector_v37.lookup.interactions:describeGlobal" connectorServiceName="wmSalesforceConnector_v37.lookup.interactions:describeGlobal"/>
+            <keyDetails collectionKey="wmSalesforceConnector_v37.lookup.interactions:describeSObject" connectorServiceName="wmSalesforceConnector_v37.lookup.interactions:describeSObject"/>
+        </servicesKeys>
+    </cloudstreamsCollectionKeys>
+</services>

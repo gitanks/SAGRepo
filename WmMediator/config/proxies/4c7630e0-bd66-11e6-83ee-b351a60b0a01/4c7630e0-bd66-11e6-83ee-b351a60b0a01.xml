@@ -1,0 +1,85 @@
+<service xmlns="http://ws.apache.org/ns/synapse" xmlns:mx="http://mediator.softwareag.com/custom" cs_service_key="uddi:4c7630e0-bd66-11e6-83ee-b351a60b0a01" name="Product" system_version="1.0" transports="http" type="virtual" url="ProductAPI_V" vs_key="4c7630e0-bd66-11e6-83ee-b351a60b0a01">
+    <resources>
+        <wsdl>
+            <wsdl:description xmlns:ns="http://axis2.apache.org" xmlns:tns="http://namespaces.DefaultOrganization.com/wsdl" xmlns:whttp="http://www.w3.org/ns/wsdl/http" xmlns:wrpc="http://www.w3.org/ns/wsdl/rpc" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsdl="http://www.w3.org/ns/wsdl" xmlns:wsdlx="http://www.w3.org/ns/wsdl-extensions" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://namespaces.DefaultOrganization.com/wsdl">
+  
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://axis2.apache.org"> 
+      <xs:element name="Product"> 
+        <xs:complexType> 
+             <xs:sequence> 
+             </xs:sequence> 
+        </xs:complexType> 
+      </xs:element> 
+    </xs:schema> 
+  </wsdl:types>
+  
+  <wsdl:interface name="Product_interface">
+    <wsdl:operation name="POST_Product" pattern="http://www.w3.org/ns/wsdl/in-out" style="http://www.w3.org/ns/wsdl/style/rpc" wrpc:signature="name #in return #return "> 
+     	<wsdl:input element="ns:Product" wsaw:Action="urn:Product"/> 
+    </wsdl:operation>
+    <wsdl:operation name="GET_Product" pattern="http://www.w3.org/ns/wsdl/in-out" style="http://www.w3.org/ns/wsdl/style/rpc" wrpc:signature="name #in return #return "> 
+     	<wsdl:input element="ns:Product" wsaw:Action="urn:Product"/> 
+    </wsdl:operation>
+    <wsdl:operation name="DELETE_Product" pattern="http://www.w3.org/ns/wsdl/in-out" style="http://www.w3.org/ns/wsdl/style/rpc" wrpc:signature="name #in return #return "> 
+     	<wsdl:input element="ns:Product" wsaw:Action="urn:Product"/> 
+    </wsdl:operation>
+    <wsdl:operation name="PUT_Product" pattern="http://www.w3.org/ns/wsdl/in-out" style="http://www.w3.org/ns/wsdl/style/rpc" wrpc:signature="name #in return #return "> 
+     	<wsdl:input element="ns:Product" wsaw:Action="urn:Product"/> 
+    </wsdl:operation>
+  </wsdl:interface>
+  
+  <wsdl:binding interface="tns:Product_interface" name="Product_binding" type="http://www.w3.org/ns/wsdl/http">
+    <wsdl:operation ref="tns:POST_Product" whttp:location="/Product" whttp:method="POST"/>
+    <wsdl:operation ref="tns:GET_Product" whttp:location="/Product" whttp:method="GET"/>
+    <wsdl:operation ref="tns:DELETE_Product" whttp:location="/Product" whttp:method="DELETE"/>
+    <wsdl:operation ref="tns:PUT_Product" whttp:location="/Product" whttp:method="PUT"/>
+  </wsdl:binding>
+  
+  <wsdl:service interface="tns:Product_interface" name="Product">
+    <wsdl:endpoint address="" binding="tns:Product_binding" name="Product_abstractEndpoint"/>
+  </wsdl:service>
+  
+</wsdl:description>
+        </wsdl>
+    </resources>
+    <definition>
+        <consumers/>
+        <monitorPolicies/>
+        <inSequence>
+            <enforcement-actions allow-anon="false">
+                <expressions>
+                    <expression>
+                        <params identify="strict" type="apiKey"/>
+                    </expression>
+                </expressions>
+            </enforcement-actions>
+            <http-config>
+                <authentication mode="anonymous"/>
+            </http-config>
+            <send>
+                <endpoint>
+                    <address isAlias="false" method="CUSTOM" uri="http://PTGHP450-AM:5544/rest/${sys:resource_path}">
+                        <connect-timeout>
+                            <duration>30</duration>
+                        </connect-timeout>
+                    </address>
+                </endpoint>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence>
+            <fault-criteria-any>
+                <fault-criteria-all>
+    <makefault version="pox">
+        <reason value=""/>
+    </makefault>
+</fault-criteria-all>
+            </fault-criteria-any>
+            <property name="RESPONSE" value="true"/>
+            <send/>
+        </faultSequence>
+    </definition>
+</service>

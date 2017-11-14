@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<IDataXMLCoder version="1.0">
+  <record javaclass="com.wm.data.ISMemDataImpl">
+    <array name="services" type="record" depth="1">
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <record name="serviceName" javaclass="com.wm.data.ISMemDataImpl">
+          <value name="xmlns">http://www.webserviceX.NET/</value>
+          <value name="ncName">StockQuote</value>
+        </record>
+        <array name="ports" type="record" depth="1">
+          <record javaclass="com.wm.data.ISMemDataImpl">
+            <value name="name">StockQuoteSoap</value>
+            <value name="addressLocation">http://www.webservicex.com/stockquote.asmx</value>
+            <record name="binding" javaclass="com.wm.data.ISMemDataImpl">
+              <record name="bindingName" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="xmlns">http://www.webserviceX.NET/</value>
+                <value name="ncName">StockQuoteSoap</value>
+              </record>
+              <record name="portTypeName" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="xmlns">http://www.webserviceX.NET/</value>
+                <value name="ncName">StockQuoteSoap</value>
+              </record>
+              <array name="operations" type="record" depth="1">
+                <record javaclass="com.wm.data.ISMemDataImpl">
+                  <value name="name">GetQuote</value>
+                  <value name="soapAction">http://www.webserviceX.NET/GetQuote</value>
+                  <record name="inputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">CloudConnector_01.StockQuote.doctypes:StockQuoteSoap_GetQuote_Input</value>
+                  </record>
+                  <record name="outputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">CloudConnector_01.StockQuote.doctypes:StockQuoteSoap_GetQuote_Output</value>
+                  </record>
+                </record>
+              </array>
+            </record>
+          </record>
+          <record javaclass="com.wm.data.ISMemDataImpl">
+            <value name="name">StockQuoteSoap12</value>
+            <value name="addressLocation">http://www.webservicex.com/stockquote.asmx</value>
+            <record name="binding" javaclass="com.wm.data.ISMemDataImpl">
+              <record name="bindingName" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="xmlns">http://www.webserviceX.NET/</value>
+                <value name="ncName">StockQuoteSoap12</value>
+              </record>
+              <record name="portTypeName" javaclass="com.wm.data.ISMemDataImpl">
+                <value name="xmlns">http://www.webserviceX.NET/</value>
+                <value name="ncName">StockQuoteSoap</value>
+              </record>
+              <array name="operations" type="record" depth="1">
+                <record javaclass="com.wm.data.ISMemDataImpl">
+                  <value name="name">GetQuote</value>
+                  <value name="soapAction">http://www.webserviceX.NET/GetQuote</value>
+                  <record name="inputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">CloudConnector_01.StockQuote.doctypes:StockQuoteSoap_GetQuote_Input</value>
+                  </record>
+                  <record name="outputSignature" javaclass="com.wm.data.ISMemDataImpl">
+                    <value name="body">CloudConnector_01.StockQuote.doctypes:StockQuoteSoap_GetQuote_Output</value>
+                  </record>
+                </record>
+              </array>
+            </record>
+          </record>
+        </array>
+      </record>
+    </array>
+  </record>
+</IDataXMLCoder>

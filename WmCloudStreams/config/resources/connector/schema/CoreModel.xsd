@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	targetNamespace="http://www.softwareag.com/cloudstreams/metadata/handler/model"
+	xmlns="http://www.softwareag.com/cloudstreams/metadata/handler/model" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:cs="http://www.softwareag.com/cloudstreams/metadata/handler/model" 
+	elementFormDefault="qualified">
+	
+	<xsd:complexType name="CSObjectType" abstract="true">
+		<xsd:sequence>
+			<xsd:element name="description" type="xsd:string" minOccurs="0" maxOccurs="1" />
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string" use="required" />
+		<xsd:attribute name="displayName" type="xsd:string" use="optional" />
+	</xsd:complexType>
+
+	<xsd:complexType name="PropertyType">
+		<xsd:attribute name="name" type="xsd:string"></xsd:attribute>
+		<xsd:attribute name="value" type="xsd:string"></xsd:attribute>
+		<xsd:attribute name="type" type="xsd:string"></xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="HandlerType">
+		<xsd:attribute name="nsName" type="xsd:string"/>
+		<xsd:attribute name="type" type="xsd:string"/>
+	</xsd:complexType>
+
+	<xsd:element name="handler" type="HandlerType"/>
+	
+	<xsd:complexType name="FieldType">
+		<xsd:complexContent>
+			<xsd:extension base="cs:CSObjectType">
+				<xsd:attribute name="type" type="xsd:string" use="optional" />
+				<xsd:attribute name="signature" type="xsd:string" use="optional" />
+				<xsd:attribute name="isRequired" type="xsd:boolean" use="optional" default="false" />
+				<xsd:attribute name="isEncrypted" type="xsd:boolean" use="optional" default="false" />
+				<xsd:attribute name="isNillable" type="xsd:boolean" use="optional" default="true" />
+				<xsd:attribute name="isHidden" type="xsd:boolean" use="optional" default="false" />
+				<xsd:attribute name="isArray" type="xsd:boolean" use="optional" default="false" />
+				<xsd:attribute name="defaultValue" type="xsd:string" use="optional" />
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="GroupType">
+		<xsd:annotation>
+			<xsd:documentation>A group represents a collection of fields, or reference to a pre-defined group name.
+    		</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="cs:CSObjectType">
+				<xsd:sequence>
+					<xsd:element ref="cs:fields" minOccurs="0" maxOccurs="1" />
+				</xsd:sequence>
+				<xsd:attribute name="type" type="xsd:string" use="optional" default="custom" />
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="XPathType" mixed="true" />
+	
+	<xsd:complexType name="ValueType" mixed="true">
+		<xsd:choice>
+			<xsd:element name="service" type="MapServiceType" maxOccurs="1" minOccurs="0"/>
+			<xsd:element name="xpath" type="XPathType" minOccurs="0" maxOccurs="1" />
+		</xsd:choice>
+		<xsd:attribute name="type">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="IDATA" />
+					<xsd:enumeration value="COOKIE" />
+					<xsd:enumeration value="XPATH" />
+					<xsd:enumeration value="HEADER" />
+					<xsd:enumeration value="LITERAL" />
+					<xsd:enumeration value="PARAMETER" />
+					<xsd:enumeration value="SERVICE" />
+					<xsd:enumeration value="DOMAIN_BEAN_RESOURCE" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="documentRef" type="xsd:string"></xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="MapType">
+		<xsd:complexContent>
+			<xsd:extension base="cs:CSObjectType">
+				<xsd:sequence>
+					<xsd:element name="source" type="cs:ValueType" />
+					<xsd:element name="target" type="cs:ValueType" />
+				</xsd:sequence>
+				<xsd:attribute name="isRequired" type="xsd:boolean" />
+				<xsd:attribute name="isFixed" type="xsd:boolean" />
+				<xsd:attribute name="context">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="IN" />
+							<xsd:enumeration value="OUT" />
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+				<xsd:attribute name="type" type="xsd:string" />
+				<xsd:attribute name="translator" type="xsd:string" />
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="LookupType">
+		<xsd:attribute name="type" type="xsd:string" use="required"></xsd:attribute>
+		<xsd:attribute name="ref" type="xsd:string" use="required"></xsd:attribute>
+	</xsd:complexType>
+	
+	<xsd:complexType name="AbstractObjectType">
+		<xsd:sequence>
+			<xsd:element name="lookup" type="LookupType" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string"></xsd:attribute>
+		<xsd:attribute name="type" type="xsd:string"></xsd:attribute>
+		<xsd:attribute name="defaultValue" type="xsd:string"></xsd:attribute>
+		<xsd:attribute name="isFixed" type="xsd:boolean" default="false"></xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="DocumentModelType">
+		<xsd:sequence>
+			<xsd:element name="abstractObject" type="AbstractObjectType"
+				maxOccurs="unbounded" minOccurs="0">
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="packageName" type="xsd:string"></xsd:attribute>
+		<xsd:attribute name="nsName" type="xsd:string"></xsd:attribute>
+		<xsd:attribute name="useInlineModel" type="xsd:boolean" default="false"></xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="MapServiceType">
+    	<xsd:sequence>
+    		<xsd:element name="hint" type="xsd:string" maxOccurs="1" minOccurs="0"/>
+    		<xsd:element name="arg" maxOccurs="unbounded" minOccurs="0">
+    			<xsd:complexType mixed="true">
+    				<xsd:attribute name="name" type="xsd:string" use="required" />
+    			</xsd:complexType>
+    		</xsd:element>
+    	</xsd:sequence>
+    	<xsd:attribute name="nsName" type="xsd:string" use="required"/>
+    	<xsd:attribute name="type" type="xsd:string"/>
+    </xsd:complexType>
+    
+    <xsd:complexType name="FormatterType">
+    	<xsd:sequence>
+    		<xsd:element name="arg" maxOccurs="unbounded" minOccurs="0">
+    			<xsd:complexType>
+    				<xsd:attribute name="name" type="xsd:string" use="required"/>
+    				<xsd:attribute name="value" type="xsd:string" use="required"/>
+    			</xsd:complexType>
+    		</xsd:element>
+    	</xsd:sequence>
+    	<xsd:attribute name="service" type="xsd:string"
+    		use="required">
+    	</xsd:attribute>
+    	<xsd:attribute name="type" type="xsd:string"></xsd:attribute>
+    </xsd:complexType>
+
+	<xsd:element name="formatter" type="FormatterType"/>
+
+	<xsd:complexType name="WrapperProperties">
+		<xsd:sequence>
+			<xsd:element name="property" type="cs:PropertyType" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="properties" type="cs:WrapperProperties"/> 
+	
+	<xsd:complexType name="ParameterType">
+		<xsd:sequence>
+			<xsd:element name="description" type="xsd:string"
+				maxOccurs="1" minOccurs="0">
+			</xsd:element>
+			<xsd:element ref="formatter" minOccurs="0" maxOccurs="1"></xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+		<xsd:attribute name="isRequired" type="xsd:string"></xsd:attribute>
+		<xsd:attribute name="style" type="xsd:string"></xsd:attribute>
+		<xsd:attribute name="defaultValue" type="xsd:string"></xsd:attribute>
+		<xsd:attribute name="dataType" type="xsd:string"></xsd:attribute>
+		<xsd:attribute name="documentRef" type="xsd:string"></xsd:attribute>
+		<xsd:attribute name="isFixed" type="xsd:string"></xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:element name="parameter" type="ParameterType"/>
+
+	<xsd:complexType name="WrapperParameter">
+		<xsd:sequence>
+			<xsd:element ref="parameter" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="WrapperMap">
+		<xsd:sequence>
+			<xsd:element name="map" type="cs:MapType" minOccurs="1" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="mappings" type="cs:WrapperMap" />
+	
+	<xsd:complexType name="WrapperGroup">
+		<xsd:sequence>
+			<xsd:element name="group" type="cs:GroupType" maxOccurs="unbounded" minOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="groups" type="cs:WrapperGroup" />
+
+	<xsd:complexType name="InteractionType" abstract="true">
+		<xsd:complexContent>
+			<xsd:extension base="cs:CSObjectType">
+				<xsd:sequence>
+					<xsd:element ref="cs:properties" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="cs:mappings" minOccurs="0" maxOccurs="1" />
+					<xsd:element name="parameters" type="cs:WrapperParameter" minOccurs="0" maxOccurs="1" />
+					<xsd:element ref="cs:handler" minOccurs="0" maxOccurs="1"/>
+				</xsd:sequence>
+				<xsd:attribute name="type">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="LOGIN" />
+							<xsd:enumeration value="LOGOUT" />
+							<xsd:enumeration value="METADATA" />
+							<xsd:enumeration value="SIMPLE" />
+							<xsd:enumeration value="COMPLEX" />
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+				<xsd:attribute name="isHidden" type="xsd:boolean" />
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:element name="interaction" type="cs:InteractionType" abstract="true" />
+
+	<xsd:complexType name="WrapperOperation">
+		<xsd:sequence>
+			<xsd:element ref="cs:interaction" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="ConnectionType" abstract="false">
+		<xsd:complexContent>
+			<xsd:extension base="cs:CSObjectType">
+				<xsd:sequence>
+					<xsd:element ref="cs:groups" maxOccurs="1" minOccurs="1"/>
+					<xsd:element name="start" type="cs:WrapperOperation" maxOccurs="1" minOccurs="0"/>
+					<xsd:element name="stop" type="cs:WrapperOperation" maxOccurs="1" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="type" type="xsd:string" use="optional" default="sagcloud" />
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="WrapperConnection">
+		<xsd:sequence>
+			<xsd:element name="connection" type="cs:ConnectionType" minOccurs="1" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="connections" type="cs:WrapperConnection" />
+	
+	<xsd:complexType name="ServiceType" abstract="true">
+		<xsd:complexContent>
+			<xsd:extension base="cs:CSObjectType">
+				<xsd:sequence>
+				   <xsd:element ref="cs:properties" minOccurs="0" maxOccurs="1"/>
+					<xsd:element name="documentModel" type="DocumentModelType" maxOccurs="1" minOccurs="0"></xsd:element>
+					<xsd:element ref="cs:interactions" maxOccurs="1" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="WrapperService">
+		<xsd:sequence>
+			<xsd:element name="service" type="cs:ServiceType" minOccurs="1" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="services" type="cs:WrapperService" />
+
+	<xsd:complexType name="WrapperField">
+		<xsd:sequence>
+			<xsd:element name="field" type="cs:FieldType" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="fields" type="cs:WrapperField" />
+		
+	<xsd:complexType name="InteractionsType" abstract="true">
+		<xsd:sequence>
+			<xsd:element ref="cs:mappings" minOccurs="0" maxOccurs="1" />
+			<xsd:element ref="cs:interaction" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="interactions" type="cs:InteractionsType" abstract="true"/>
+
+</xsd:schema>

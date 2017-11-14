@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<services>
+    <registeredNames serviceName="cf99b9af-bcad-11e6-8d2d-d0490344dd7d">
+        <consumerNames/>
+        <apiKeys>
+            <apiKey>uddi:67bf55b2-fac0-11e6-a656-c76329fe1c89</apiKey>
+        </apiKeys>
+        <oAuth2Tokens/>
+    </registeredNames>
+    <registeredNames serviceName="28e75082-bc37-11e6-81bf-e6cebb14e60c">
+        <consumerNames/>
+        <apiKeys>
+            <apiKey>uddi:e06fef1d-bc3c-11e6-81bf-fa1c4b75ce23</apiKey>
+        </apiKeys>
+        <oAuth2Tokens/>
+    </registeredNames>
+    <registeredNames serviceName="15723f84-bc42-11e6-81bf-94400c2b2c12">
+        <consumerNames/>
+        <apiKeys>
+            <apiKey>uddi:8243697e-bc42-11e6-81bf-d7c07c0fc506</apiKey>
+        </apiKeys>
+        <oAuth2Tokens/>
+    </registeredNames>
+    <registeredNames serviceName="d2931a5e-fabf-11e6-a656-ef2adc6c61d2">
+        <consumerNames/>
+        <apiKeys>
+            <apiKey>uddi:a228b9df-fac1-11e6-a656-e749c2633f97</apiKey>
+        </apiKeys>
+        <oAuth2Tokens/>
+    </registeredNames>
+    <registeredNames serviceName="4c7630e0-bd66-11e6-83ee-b351a60b0a01">
+        <consumerNames/>
+        <apiKeys>
+            <apiKey>uddi:b76df75c-bd66-11e6-83ee-c44f6695c6f1</apiKey>
+        </apiKeys>
+        <oAuth2Tokens/>
+    </registeredNames>
+    <registeredNames serviceName="3a2ceabb-bd12-11e6-83ee-9b8a21265719">
+        <consumerNames/>
+        <apiKeys>
+            <apiKey>uddi:a5ee368f-bd12-11e6-83ee-91d0c7b86f5d</apiKey>
+        </apiKeys>
+        <oAuth2Tokens/>
+    </registeredNames>
+</services>

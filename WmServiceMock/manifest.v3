@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <record name="startup_services" javaclass="com.wm.util.Values">
+    <value name="wm.ps.serviceMock:startup"></value>
+  </record>
+  <record name="shutdown_services" javaclass="com.wm.util.Values">
+    <value name="wm.ps.serviceMock:shutdown"></value>
+  </record>
+  <value name="name">WmServiceMock</value>
+  <value name="description">WmServiceMock Package</value>
+  <value name="jvm_version">1.7</value>
+  <value name="enabled">yes</value>
+  <value name="system_package">no</value>
+  <value name="publisher">Software AG</value>
+  <value name="version">9.12.0.1.116</value>
+  <value name="build">116</value>
+</Values>

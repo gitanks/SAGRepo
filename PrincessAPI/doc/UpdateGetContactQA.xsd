@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 rel. 3 (http://www.altova.com) by PRINCESS CRUISES (PRINCESS CRUISES) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="UpdateContactQARequest" type="UpdateContactQARequesttype">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="UpdateContactQARequesttype">
+		<xs:sequence>
+			<xs:element name="CustomerId" type="xs:string" minOccurs="0"/>
+			<xs:element name="QuestionAnswers" type="QuestionAnswersType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="CruiseCompany" type="CruiseCompanyDetailType" minOccurs="0"/>
+			<xs:element name="FormCode" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CruiseCompanyDetailType">
+		<xs:sequence>
+			<xs:element name="BookingCompanyCode" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Cruise Company that makes booking</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ProductCompanyCode">
+				<xs:annotation>
+					<xs:documentation>Cruise Company that offers the product</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="StatusResponseType">
+		<xs:sequence>
+			<xs:element name="Status" type="xs:string"/>
+			<xs:element name="TransactionId" type="xs:string" minOccurs="0"/>
+			<xs:element name="ReturnCode" type="xs:string"/>
+			<xs:element name="StatusCode" type="xs:string"/>
+			<xs:element name="StatusMessage" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QuestionAnswersType">
+		<xs:sequence>
+			<xs:element name="Question" type="xs:string" minOccurs="0"/>
+			<xs:element name="Answer" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="UpdateContactQAResponse" type="StatusResponseType"/>
+</xs:schema>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 rel. 3 (http://www.altova.com) by PRINCESS CRUISES (PRINCESS CRUISES) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="SourceResponse" type="AddSourceResponseRequestType"/>
+	<xs:element name="StatusResponse" type="StatusResponseType"/>
+	<xs:complexType name="AddSourceResponseRequestType">
+		<xs:annotation>
+			<xs:documentation>AddSourceResponse Request</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CruiseCompany" type="CruiseCompanyDetailType"/>
+			<xs:element name="CustomerId" type="xs:string"/>
+			<xs:element name="FormCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="AffiliateSiteld" type="xs:string" minOccurs="0"/>
+			<xs:element name="CampaignCd" type="xs:string" minOccurs="0"/>
+			<xs:element name="CouponCd" type="xs:string" minOccurs="0"/>
+			<xs:element name="SiteEnteredDataTime" type="xs:string" minOccurs="0"/>
+			<xs:element name="BookingNumber" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="StatusResponseType">
+		<xs:annotation>
+			<xs:documentation>Response Status</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Status" type="xs:string"/>
+			<xs:element name="TransactionId" type="xs:string" minOccurs="0"/>
+			<xs:element name="ReturnCode" type="xs:string"/>
+			<xs:element name="StatusCode" type="xs:string"/>
+			<xs:element name="StatusMessage" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CruiseCompanyDetailType">
+		<xs:annotation>
+			<xs:documentation>Cruise Company Type</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="BookingCompanyCode" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Cruise Company that makes booking</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ProductCompanyCode">
+				<xs:annotation>
+					<xs:documentation>Cruise Company that offers the product</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

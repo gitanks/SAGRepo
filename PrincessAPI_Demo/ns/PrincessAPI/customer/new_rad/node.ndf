@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">restDescriptor</value>
+  <value name="node_subtype">unknown</value>
+  <value name="node_nsName">PrincessAPI.customer:new_rad</value>
+  <value name="node_pkg">PrincessAPI_Demo</value>
+  <value name="node_comment"></value>
+  <value name="is_public">false</value>
+  <record name="generalInfo" javaclass="com.wm.util.Values">
+    <value name="specVersion">2.0</value>
+    <value name="hostName">172.29.1.24:5544</value>
+    <value name="basePath">/rest/{$resourceID}/{$path}</value>
+    <array name="schemes" type="value" depth="1">
+      <value>http</value>
+      <value>https</value>
+    </array>
+    <array name="consumes" type="value" depth="1">
+      <value>application/json</value>
+    </array>
+    <array name="produces" type="value" depth="1">
+      <value>application/json</value>
+    </array>
+  </record>
+  <record name="appInfo" javaclass="com.wm.util.Values">
+    <value name="appVersion">1.0</value>
+    <null name="description"/>
+    <value name="title">sample</value>
+  </record>
+  <record name="restResources" javaclass="com.wm.util.Values">
+    <record name="PrincessAPI.customer" javaclass="com.wm.util.Values">
+      <value name="nsName">PrincessAPI.customer</value>
+      <null name="path"/>
+      <null name="suffix"/>
+      <record name="operations" javaclass="com.wm.util.Values">
+        <record name="DELETE" javaclass="com.wm.util.Values">
+          <value name="operationType">DELETE</value>
+          <value name="nsName">PrincessAPI.customer:_delete</value>
+          <record name="parameters" javaclass="com.wm.util.Values">
+            <record name="$resourceID" javaclass="com.wm.util.Values">
+              <value name="name">$resourceID</value>
+              <value name="source">FORMDATA</value>
+              <value name="type">STRING</value>
+              <value name="description"></value>
+              <Boolean name="isRequired">false</Boolean>
+              <Boolean name="isArray">false</Boolean>
+              <null name="defaultValue"/>
+              <null name="refDefinition"/>
+            </record>
+            <record name="$path" javaclass="com.wm.util.Values">
+              <value name="name">$path</value>
+              <value name="source">FORMDATA</value>
+              <value name="type">STRING</value>
+              <value name="description"></value>
+              <Boolean name="isRequired">false</Boolean>
+              <Boolean name="isArray">false</Boolean>
+              <null name="defaultValue"/>
+              <null name="refDefinition"/>
+            </record>
+          </record>
+          <record name="responses" javaclass="com.wm.util.Values">
+            <record name="200" javaclass="com.wm.util.Values">
+              <value name="statusCode">200</value>
+              <value name="description">Successful</value>
+              <Boolean name="returnOutput">true</Boolean>
+            </record>
+            <record name="401" javaclass="com.wm.util.Values">
+              <value name="statusCode">401</value>
+              <value name="description">Access Denied</value>
+              <Boolean name="returnOutput">false</Boolean>
+            </record>
+          </record>
+        </record>
+        <record name="POST" javaclass="com.wm.util.Values">
+          <value name="operationType">POST</value>
+          <value name="nsName">PrincessAPI.customer:_post</value>
+          <value name="description"></value>
+          <array name="requiredDefinitions" type="value" depth="1">
+            <value>PrincessCanonicals.api.v1.preferencemetadata:GetQAMetaDataRequest</value>
+            <value>PrincessAPI.customer:_post.QAQuestionAndAnswerRequest</value>
+            <value>PrincessAPI.customer:_post.CruiseCompany</value>
+            <value>PrincessCanonicals.api.v1.preferencemetadata:GetQAMetaDataResponse</value>
+            <value>PrincessAPI.customer:_post.QAQuestionAndAnswerResponse</value>
+            <value>PrincessAPI.customer:_post.PreferencesMetadata</value>
+            <value>PrincessAPI.customer:_post.StatusResponse</value>
+            <value>PrincessAPI.customer:_post.Question</value>
+            <value>PrincessAPI.customer:_post.Answer</value>
+            <value>PrincessAPI.customer:_post_$response</value>
+          </array>
+          <record name="parameters" javaclass="com.wm.util.Values">
+            <record name="$resourceID" javaclass="com.wm.util.Values">
+              <value name="name">$resourceID</value>
+              <value name="source">FORMDATA</value>
+              <value name="type">STRING</value>
+              <value name="description"></value>
+              <Boolean name="isRequired">false</Boolean>
+              <Boolean name="isArray">false</Boolean>
+              <null name="defaultValue"/>
+              <null name="refDefinition"/>
+            </record>
+            <record name="$path" javaclass="com.wm.util.Values">
+              <value name="name">$path</value>
+              <value name="source">FORMDATA</value>
+              <value name="type">STRING</value>
+              <value name="description"></value>
+              <Boolean name="isRequired">false</Boolean>
+              <Boolean name="isArray">false</Boolean>
+              <null name="defaultValue"/>
+              <null name="refDefinition"/>
+            </record>
+            <record name="GetQAMetaDataRequest" javaclass="com.wm.util.Values">
+              <value name="name">GetQAMetaDataRequest</value>
+              <value name="source">BODY</value>
+              <value name="type">REFERENCE</value>
+              <value name="description"></value>
+              <Boolean name="isRequired">true</Boolean>
+              <Boolean name="isArray">false</Boolean>
+              <null name="defaultValue"/>
+              <value name="refDefinition">PrincessCanonicals.api.v1.preferencemetadata:GetQAMetaDataRequest</value>
+            </record>
+          </record>
+          <record name="responseParam" javaclass="com.wm.util.Values">
+            <value name="name">reseponse</value>
+            <value name="source">BODY</value>
+            <value name="type">REFERENCE</value>
+            <null name="description"/>
+            <Boolean name="isRequired">true</Boolean>
+            <Boolean name="isArray">false</Boolean>
+            <null name="defaultValue"/>
+            <value name="refDefinition">PrincessAPI.customer:_post_$response</value>
+          </record>
+          <record name="responses" javaclass="com.wm.util.Values">
+            <record name="200" javaclass="com.wm.util.Values">
+              <value name="statusCode">200</value>
+              <value name="description">Successful</value>
+              <Boolean name="returnOutput">true</Boolean>
+            </record>
+            <record name="401" javaclass="com.wm.util.Values">
+              <value name="statusCode">401</value>
+              <value name="description">Access Denied</value>
+              <Boolean name="returnOutput">false</Boolean>
+            </record>
+          </record>
+        </record>
+        <record name="GET" javaclass="com.wm.util.Values">
+          <value name="operationType">GET</value>
+          <value name="nsName">PrincessAPI.customer:_get</value>
+          <value name="description"></value>
+          <record name="parameters" javaclass="com.wm.util.Values">
+            <record name="$resourceID" javaclass="com.wm.util.Values">
+              <value name="name">$resourceID</value>
+              <value name="source">FORMDATA</value>
+              <value name="type">STRING</value>
+              <value name="description"></value>
+              <Boolean name="isRequired">false</Boolean>
+              <Boolean name="isArray">false</Boolean>
+              <null name="defaultValue"/>
+              <null name="refDefinition"/>
+            </record>
+            <record name="$path" javaclass="com.wm.util.Values">
+              <value name="name">$path</value>
+              <value name="source">FORMDATA</value>
+              <value name="type">STRING</value>
+              <value name="description"></value>
+              <Boolean name="isRequired">false</Boolean>
+              <Boolean name="isArray">false</Boolean>
+              <null name="defaultValue"/>
+              <null name="refDefinition"/>
+            </record>
+          </record>
+          <record name="responses" javaclass="com.wm.util.Values">
+            <record name="200" javaclass="com.wm.util.Values">
+              <value name="statusCode">200</value>
+              <value name="description">Successful</value>
+              <Boolean name="returnOutput">true</Boolean>
+            </record>
+            <record name="401" javaclass="com.wm.util.Values">
+              <value name="statusCode">401</value>
+              <value name="description">Access Denied</value>
+              <Boolean name="returnOutput">false</Boolean>
+            </record>
+          </record>
+        </record>
+      </record>
+    </record>
+  </record>
+  <record name="restDefinitions" javaclass="com.wm.util.Values">
+    <record name="PrincessCanonicals.api.v1.preferencemetadata:GetQAMetaDataRequest" javaclass="com.wm.util.Values">
+      <value name="nsName">PrincessCanonicals.api.v1.preferencemetadata:GetQAMetaDataRequest</value>
+      <Boolean name="autoGenerated">false</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="QAQuestionAndAnswerRequest" javaclass="com.wm.util.Values">
+          <value name="name">QAQuestionAndAnswerRequest</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">PrincessAPI.customer:_post.QAQuestionAndAnswerRequest</value>
+        </record>
+      </record>
+    </record>
+    <record name="PrincessAPI.customer:_post.Question" javaclass="com.wm.util.Values">
+      <value name="nsName">PrincessAPI.customer:_post.Question</value>
+      <Boolean name="autoGenerated">true</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="@Id" javaclass="com.wm.util.Values">
+          <value name="name">@Id</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="@TabIndicator" javaclass="com.wm.util.Values">
+          <value name="name">@TabIndicator</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="@Required" javaclass="com.wm.util.Values">
+          <value name="name">@Required</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="@MultipleAnswers" javaclass="com.wm.util.Values">
+          <value name="name">@MultipleAnswers</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="@Description" javaclass="com.wm.util.Values">
+          <value name="name">@Description</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="Answer" javaclass="com.wm.util.Values">
+          <value name="name">Answer</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">true</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">PrincessAPI.customer:_post.Answer</value>
+        </record>
+      </record>
+    </record>
+    <record name="PrincessAPI.customer:_post.QAQuestionAndAnswerResponse" javaclass="com.wm.util.Values">
+      <value name="nsName">PrincessAPI.customer:_post.QAQuestionAndAnswerResponse</value>
+      <Boolean name="autoGenerated">true</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="CruiseCompany" javaclass="com.wm.util.Values">
+          <value name="name">CruiseCompany</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">PrincessAPI.customer:_post.CruiseCompany</value>
+        </record>
+        <record name="PreferencesMetadata" javaclass="com.wm.util.Values">
+          <value name="name">PreferencesMetadata</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">PrincessAPI.customer:_post.PreferencesMetadata</value>
+        </record>
+        <record name="StatusResponse" javaclass="com.wm.util.Values">
+          <value name="name">StatusResponse</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">PrincessAPI.customer:_post.StatusResponse</value>
+        </record>
+      </record>
+    </record>
+    <record name="PrincessAPI.customer:_post.CruiseCompany" javaclass="com.wm.util.Values">
+      <value name="nsName">PrincessAPI.customer:_post.CruiseCompany</value>
+      <Boolean name="autoGenerated">true</Boolean>
+      <Boolean name="recursive">true</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="BookingCompanyCode" javaclass="com.wm.util.Values">
+          <value name="name">BookingCompanyCode</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="ProductCompanyCode" javaclass="com.wm.util.Values">
+          <value name="name">ProductCompanyCode</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+      </record>
+    </record>
+    <record name="PrincessCanonicals.api.v1.preferencemetadata:GetQAMetaDataResponse" javaclass="com.wm.util.Values">
+      <value name="nsName">PrincessCanonicals.api.v1.preferencemetadata:GetQAMetaDataResponse</value>
+      <Boolean name="autoGenerated">false</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="QAQuestionAndAnswerResponse" javaclass="com.wm.util.Values">
+          <value name="name">QAQuestionAndAnswerResponse</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">PrincessAPI.customer:_post.QAQuestionAndAnswerResponse</value>
+        </record>
+      </record>
+    </record>
+    <record name="PrincessAPI.customer:_post.Answer" javaclass="com.wm.util.Values">
+      <value name="nsName">PrincessAPI.customer:_post.Answer</value>
+      <Boolean name="autoGenerated">true</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="@Id" javaclass="com.wm.util.Values">
+          <value name="name">@Id</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="@Description" javaclass="com.wm.util.Values">
+          <value name="name">@Description</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+      </record>
+    </record>
+    <record name="PrincessAPI.customer:_post_$response" javaclass="com.wm.util.Values">
+      <value name="nsName">PrincessAPI.customer:_post_$response</value>
+      <Boolean name="autoGenerated">true</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="GetQAMetaDataResponse" javaclass="com.wm.util.Values">
+          <value name="name">GetQAMetaDataResponse</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">PrincessCanonicals.api.v1.preferencemetadata:GetQAMetaDataResponse</value>
+        </record>
+      </record>
+    </record>
+    <record name="PrincessAPI.customer:_post.PreferencesMetadata" javaclass="com.wm.util.Values">
+      <value name="nsName">PrincessAPI.customer:_post.PreferencesMetadata</value>
+      <Boolean name="autoGenerated">true</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="Question" javaclass="com.wm.util.Values">
+          <value name="name">Question</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">true</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">PrincessAPI.customer:_post.Question</value>
+        </record>
+      </record>
+    </record>
+    <record name="PrincessAPI.customer:_post.StatusResponse" javaclass="com.wm.util.Values">
+      <value name="nsName">PrincessAPI.customer:_post.StatusResponse</value>
+      <Boolean name="autoGenerated">true</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="Status" javaclass="com.wm.util.Values">
+          <value name="name">Status</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="TransactionId" javaclass="com.wm.util.Values">
+          <value name="name">TransactionId</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="ReturnCode" javaclass="com.wm.util.Values">
+          <value name="name">ReturnCode</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="StatusCode" javaclass="com.wm.util.Values">
+          <value name="name">StatusCode</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="StatusMessage" javaclass="com.wm.util.Values">
+          <value name="name">StatusMessage</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+      </record>
+    </record>
+    <record name="PrincessAPI.customer:_post.QAQuestionAndAnswerRequest" javaclass="com.wm.util.Values">
+      <value name="nsName">PrincessAPI.customer:_post.QAQuestionAndAnswerRequest</value>
+      <Boolean name="autoGenerated">true</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="CruiseCompany" javaclass="com.wm.util.Values">
+          <value name="name">CruiseCompany</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">PrincessAPI.customer:_post.CruiseCompany</value>
+        </record>
+      </record>
+    </record>
+  </record>
+</Values>

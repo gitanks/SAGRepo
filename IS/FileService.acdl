@@ -1,0 +1,43 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="FileService" runtimeVersion="9.12.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="BuildVersion" value="9.12.17" />
+  <buildInfo name="BuildTimestamp" value="2017-09-10T10:40:36" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="9.12.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="disallowActivePackageInstall">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="packageExecutionCheck">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types To Broker During Deployment">
+    <value>true</value>
+  </property>
+  <asset name="ISPackage.FileService" displayName="FileService">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="FileService.uploadFileToDrive" displayName="FileService:uploadFileToDrive">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="FileService.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+

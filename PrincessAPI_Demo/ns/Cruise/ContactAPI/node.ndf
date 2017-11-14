@@ -1,0 +1,1389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">restDescriptor</value>
+  <value name="node_subtype">unknown</value>
+  <value name="node_nsName">Cruise:ContactAPI</value>
+  <value name="node_pkg">PrincessAPI_Demo</value>
+  <value name="is_public">false</value>
+  <record name="generalInfo" javaclass="com.wm.util.Values">
+    <value name="specVersion">2.0</value>
+    <value name="hostName">PTGHP450-AM:5544</value>
+    <value name="basePath">/rest</value>
+    <array name="schemes" type="value" depth="1">
+      <value>http</value>
+    </array>
+    <array name="consumes" type="value" depth="1">
+      <value>application/json</value>
+    </array>
+    <array name="produces" type="value" depth="1">
+      <value>application/json</value>
+    </array>
+  </record>
+  <record name="appInfo" javaclass="com.wm.util.Values">
+    <value name="appVersion">1.0</value>
+    <null name="description"/>
+    <value name="title">ContactAPI</value>
+  </record>
+  <record name="restResources" javaclass="com.wm.util.Values">
+    <record name="Cruise" javaclass="com.wm.util.Values">
+      <value name="nsName">Cruise</value>
+      <null name="path"/>
+      <null name="suffix"/>
+      <record name="operations" javaclass="com.wm.util.Values">
+        <record name="DELETE" javaclass="com.wm.util.Values">
+          <value name="operationType">DELETE</value>
+          <value name="nsName">Cruise:_delete</value>
+          <record name="parameters" javaclass="com.wm.util.Values">
+            <record name="$path" javaclass="com.wm.util.Values">
+              <value name="name">$path</value>
+              <value name="source">FORMDATA</value>
+              <value name="type">STRING</value>
+              <null name="description"/>
+              <Boolean name="isRequired">false</Boolean>
+              <Boolean name="isArray">false</Boolean>
+              <null name="defaultValue"/>
+              <null name="refDefinition"/>
+            </record>
+            <record name="$resourceID" javaclass="com.wm.util.Values">
+              <value name="name">$resourceID</value>
+              <value name="source">FORMDATA</value>
+              <value name="type">STRING</value>
+              <null name="description"/>
+              <Boolean name="isRequired">false</Boolean>
+              <Boolean name="isArray">false</Boolean>
+              <null name="defaultValue"/>
+              <null name="refDefinition"/>
+            </record>
+          </record>
+          <record name="responses" javaclass="com.wm.util.Values">
+            <record name="200" javaclass="com.wm.util.Values">
+              <value name="statusCode">200</value>
+              <value name="description">Successful</value>
+              <Boolean name="returnOutput">true</Boolean>
+            </record>
+            <record name="401" javaclass="com.wm.util.Values">
+              <value name="statusCode">401</value>
+              <value name="description">Access Denied</value>
+              <Boolean name="returnOutput">false</Boolean>
+            </record>
+          </record>
+        </record>
+        <record name="POST" javaclass="com.wm.util.Values">
+          <value name="operationType">POST</value>
+          <value name="nsName">Cruise:_post</value>
+          <array name="requiredDefinitions" type="value" depth="1">
+            <value>PrincessCanonicals.api.v1.contacts_1:ContactSummaryRequest</value>
+            <value>PrincessCanonicals.api.v1.contacts_1:docTypeRef_ContactSummaryRequestType</value>
+            <value>PrincessCanonicals.api.v1.contacts_1:docTypeRef_CruiseCompanyDetailType</value>
+            <value>PrincessCanonicals.api.v1.contacts:ContactSummaryResponse</value>
+            <value>PrincessCanonicals.api.v1.contacts:docTypeRef_ContactSummaryResponseType</value>
+            <value>PrincessCanonicals.api.v1.contacts:docTypeRef_CruiseHistorySummaryType</value>
+            <value>PrincessCanonicals.api.v1.contacts:docTypeRef_PersonalDetailType</value>
+            <value>PrincessCanonicals.api.v1.contacts:docTypeRef_TelephoneType</value>
+            <value>PrincessCanonicals.api.v1.contacts:docTypeRef_AddressDetailType</value>
+            <value>PrincessCanonicals.api.v1.contacts:docTypeRef_ContactPreferencesDetailType</value>
+            <value>PrincessCanonicals.api.v1.contacts:docTypeRef_PassportDetailType</value>
+            <value>PrincessCanonicals.api.v1.contacts:docTypeRef_NameDetailType</value>
+            <value>PrincessCanonicals.api.v1.contacts:docTypeRef_EmailType</value>
+            <value>PrincessCanonicals.api.v1.contacts:docTypeRef_CruiseCompanyDetailType</value>
+            <value>PrincessCanonicals.api.v1.contacts:docTypeRef_LastCruiseType</value>
+            <value>PrincessCanonicals.api.v1.contacts:docTypeRef_FirstCruiseType</value>
+            <value>Cruise:_post_$response</value>
+          </array>
+          <record name="parameters" javaclass="com.wm.util.Values">
+            <record name="$path" javaclass="com.wm.util.Values">
+              <value name="name">$path</value>
+              <value name="source">HEADER</value>
+              <value name="type">STRING</value>
+              <null name="description"/>
+              <Boolean name="isRequired">false</Boolean>
+              <Boolean name="isArray">false</Boolean>
+              <null name="defaultValue"/>
+              <null name="refDefinition"/>
+            </record>
+            <record name="$resourceID" javaclass="com.wm.util.Values">
+              <value name="name">$resourceID</value>
+              <value name="source">HEADER</value>
+              <value name="type">STRING</value>
+              <null name="description"/>
+              <Boolean name="isRequired">false</Boolean>
+              <Boolean name="isArray">false</Boolean>
+              <null name="defaultValue"/>
+              <null name="refDefinition"/>
+            </record>
+            <record name="ContactSummaryRequest" javaclass="com.wm.util.Values">
+              <value name="name">ContactSummaryRequest</value>
+              <value name="source">BODY</value>
+              <value name="type">REFERENCE</value>
+              <null name="description"/>
+              <Boolean name="isRequired">true</Boolean>
+              <Boolean name="isArray">false</Boolean>
+              <null name="defaultValue"/>
+              <value name="refDefinition">PrincessCanonicals.api.v1.contacts_1:ContactSummaryRequest</value>
+            </record>
+          </record>
+          <record name="responseParam" javaclass="com.wm.util.Values">
+            <value name="name">reseponse</value>
+            <value name="source">BODY</value>
+            <value name="type">REFERENCE</value>
+            <null name="description"/>
+            <Boolean name="isRequired">true</Boolean>
+            <Boolean name="isArray">false</Boolean>
+            <null name="defaultValue"/>
+            <value name="refDefinition">Cruise:_post_$response</value>
+          </record>
+          <record name="responses" javaclass="com.wm.util.Values">
+            <record name="200" javaclass="com.wm.util.Values">
+              <value name="statusCode">200</value>
+              <value name="description">Successful</value>
+              <Boolean name="returnOutput">true</Boolean>
+            </record>
+            <record name="401" javaclass="com.wm.util.Values">
+              <value name="statusCode">401</value>
+              <value name="description">Access Denied</value>
+              <Boolean name="returnOutput">false</Boolean>
+            </record>
+          </record>
+        </record>
+        <record name="GET" javaclass="com.wm.util.Values">
+          <value name="operationType">GET</value>
+          <value name="nsName">Cruise:_get</value>
+          <record name="parameters" javaclass="com.wm.util.Values">
+            <record name="$path" javaclass="com.wm.util.Values">
+              <value name="name">$path</value>
+              <value name="source">FORMDATA</value>
+              <value name="type">STRING</value>
+              <null name="description"/>
+              <Boolean name="isRequired">false</Boolean>
+              <Boolean name="isArray">false</Boolean>
+              <null name="defaultValue"/>
+              <null name="refDefinition"/>
+            </record>
+            <record name="$resourceID" javaclass="com.wm.util.Values">
+              <value name="name">$resourceID</value>
+              <value name="source">FORMDATA</value>
+              <value name="type">STRING</value>
+              <null name="description"/>
+              <Boolean name="isRequired">false</Boolean>
+              <Boolean name="isArray">false</Boolean>
+              <null name="defaultValue"/>
+              <null name="refDefinition"/>
+            </record>
+          </record>
+          <record name="responses" javaclass="com.wm.util.Values">
+            <record name="200" javaclass="com.wm.util.Values">
+              <value name="statusCode">200</value>
+              <value name="description">Successful</value>
+              <Boolean name="returnOutput">true</Boolean>
+            </record>
+            <record name="401" javaclass="com.wm.util.Values">
+              <value name="statusCode">401</value>
+              <value name="description">Access Denied</value>
+              <Boolean name="returnOutput">false</Boolean>
+            </record>
+          </record>
+        </record>
+        <record name="PUT" javaclass="com.wm.util.Values">
+          <value name="operationType">PUT</value>
+          <value name="nsName">Cruise:_put</value>
+          <record name="parameters" javaclass="com.wm.util.Values">
+            <record name="$path" javaclass="com.wm.util.Values">
+              <value name="name">$path</value>
+              <value name="source">FORMDATA</value>
+              <value name="type">STRING</value>
+              <null name="description"/>
+              <Boolean name="isRequired">false</Boolean>
+              <Boolean name="isArray">false</Boolean>
+              <null name="defaultValue"/>
+              <null name="refDefinition"/>
+            </record>
+            <record name="$resourceID" javaclass="com.wm.util.Values">
+              <value name="name">$resourceID</value>
+              <value name="source">FORMDATA</value>
+              <value name="type">STRING</value>
+              <null name="description"/>
+              <Boolean name="isRequired">false</Boolean>
+              <Boolean name="isArray">false</Boolean>
+              <null name="defaultValue"/>
+              <null name="refDefinition"/>
+            </record>
+          </record>
+          <record name="responses" javaclass="com.wm.util.Values">
+            <record name="200" javaclass="com.wm.util.Values">
+              <value name="statusCode">200</value>
+              <value name="description">Successful</value>
+              <Boolean name="returnOutput">true</Boolean>
+            </record>
+            <record name="401" javaclass="com.wm.util.Values">
+              <value name="statusCode">401</value>
+              <value name="description">Access Denied</value>
+              <Boolean name="returnOutput">false</Boolean>
+            </record>
+          </record>
+        </record>
+      </record>
+    </record>
+  </record>
+  <record name="restDefinitions" javaclass="com.wm.util.Values">
+    <record name="PrincessCanonicals.api.v1.contacts:docTypeRef_PersonalDetailType" javaclass="com.wm.util.Values">
+      <value name="nsName">PrincessCanonicals.api.v1.contacts:docTypeRef_PersonalDetailType</value>
+      <Boolean name="autoGenerated">false</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="AnniversaryDate" javaclass="com.wm.util.Values">
+          <value name="name">AnniversaryDate</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="OccupationDescription" javaclass="com.wm.util.Values">
+          <value name="name">OccupationDescription</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="NationalityCode" javaclass="com.wm.util.Values">
+          <value name="name">NationalityCode</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="Gender" javaclass="com.wm.util.Values">
+          <value name="name">Gender</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="OccupationCode" javaclass="com.wm.util.Values">
+          <value name="name">OccupationCode</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="RetiredFlag" javaclass="com.wm.util.Values">
+          <value name="name">RetiredFlag</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="PlaceOfBirth" javaclass="com.wm.util.Values">
+          <value name="name">PlaceOfBirth</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="MaritalStatus" javaclass="com.wm.util.Values">
+          <value name="name">MaritalStatus</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="CountryOfResidency" javaclass="com.wm.util.Values">
+          <value name="name">CountryOfResidency</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="CountryOfCitizenship" javaclass="com.wm.util.Values">
+          <value name="name">CountryOfCitizenship</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="Age" javaclass="com.wm.util.Values">
+          <value name="name">Age</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="CountryOfBirth" javaclass="com.wm.util.Values">
+          <value name="name">CountryOfBirth</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="BirthDate" javaclass="com.wm.util.Values">
+          <value name="name">BirthDate</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+      </record>
+    </record>
+    <record name="PrincessCanonicals.api.v1.contacts_1:ContactSummaryRequest" javaclass="com.wm.util.Values">
+      <value name="nsName">PrincessCanonicals.api.v1.contacts_1:ContactSummaryRequest</value>
+      <Boolean name="autoGenerated">false</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="ContactSummaryRequest" javaclass="com.wm.util.Values">
+          <value name="name">ContactSummaryRequest</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">PrincessCanonicals.api.v1.contacts_1:docTypeRef_ContactSummaryRequestType</value>
+        </record>
+      </record>
+    </record>
+    <record name="PrincessCanonicals.api.v1.contacts:docTypeRef_TelephoneType" javaclass="com.wm.util.Values">
+      <value name="nsName">PrincessCanonicals.api.v1.contacts:docTypeRef_TelephoneType</value>
+      <Boolean name="autoGenerated">false</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="Phone" javaclass="com.wm.util.Values">
+          <value name="name">Phone</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="Fax" javaclass="com.wm.util.Values">
+          <value name="name">Fax</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="Mobile" javaclass="com.wm.util.Values">
+          <value name="name">Mobile</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+      </record>
+    </record>
+    <record name="PrincessCanonicals.api.v1.contacts:docTypeRef_FirstCruiseType" javaclass="com.wm.util.Values">
+      <value name="nsName">PrincessCanonicals.api.v1.contacts:docTypeRef_FirstCruiseType</value>
+      <Boolean name="autoGenerated">false</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="FirstSailDate" javaclass="com.wm.util.Values">
+          <value name="name">FirstSailDate</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+      </record>
+    </record>
+    <record name="PrincessCanonicals.api.v1.contacts:docTypeRef_ContactPreferencesDetailType" javaclass="com.wm.util.Values">
+      <value name="nsName">PrincessCanonicals.api.v1.contacts:docTypeRef_ContactPreferencesDetailType</value>
+      <Boolean name="autoGenerated">false</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="CPMailCode" javaclass="com.wm.util.Values">
+          <value name="name">CPMailCode</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="PhoneCodeDate" javaclass="com.wm.util.Values">
+          <value name="name">PhoneCodeDate</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="DoNotShare" javaclass="com.wm.util.Values">
+          <value name="name">DoNotShare</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="CPEmailCode" javaclass="com.wm.util.Values">
+          <value name="name">CPEmailCode</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="ExpressedConsent" javaclass="com.wm.util.Values">
+          <value name="name">ExpressedConsent</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="CPPhoneCode" javaclass="com.wm.util.Values">
+          <value name="name">CPPhoneCode</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+      </record>
+    </record>
+    <record name="PrincessCanonicals.api.v1.contacts:docTypeRef_EmailType" javaclass="com.wm.util.Values">
+      <value name="nsName">PrincessCanonicals.api.v1.contacts:docTypeRef_EmailType</value>
+      <Boolean name="autoGenerated">false</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="Email" javaclass="com.wm.util.Values">
+          <value name="name">Email</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+      </record>
+    </record>
+    <record name="PrincessCanonicals.api.v1.contacts:docTypeRef_CruiseCompanyDetailType" javaclass="com.wm.util.Values">
+      <value name="nsName">PrincessCanonicals.api.v1.contacts:docTypeRef_CruiseCompanyDetailType</value>
+      <Boolean name="autoGenerated">false</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="ProductCompanyCode" javaclass="com.wm.util.Values">
+          <value name="name">ProductCompanyCode</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="BookingCompanyCode" javaclass="com.wm.util.Values">
+          <value name="name">BookingCompanyCode</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+      </record>
+    </record>
+    <record name="PrincessCanonicals.api.v1.contacts_1:docTypeRef_CruiseCompanyDetailType" javaclass="com.wm.util.Values">
+      <value name="nsName">PrincessCanonicals.api.v1.contacts_1:docTypeRef_CruiseCompanyDetailType</value>
+      <Boolean name="autoGenerated">false</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="ProductCompanyCode" javaclass="com.wm.util.Values">
+          <value name="name">ProductCompanyCode</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="BookingCompanyCode" javaclass="com.wm.util.Values">
+          <value name="name">BookingCompanyCode</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+      </record>
+    </record>
+    <record name="PrincessCanonicals.api.v1.contacts:docTypeRef_CruiseHistorySummaryType" javaclass="com.wm.util.Values">
+      <value name="nsName">PrincessCanonicals.api.v1.contacts:docTypeRef_CruiseHistorySummaryType</value>
+      <Boolean name="autoGenerated">false</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="LoyaltyCode" javaclass="com.wm.util.Values">
+          <value name="name">LoyaltyCode</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="TotalFare" javaclass="com.wm.util.Values">
+          <value name="name">TotalFare</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="FirstCruise" javaclass="com.wm.util.Values">
+          <value name="name">FirstCruise</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">PrincessCanonicals.api.v1.contacts:docTypeRef_FirstCruiseType</value>
+        </record>
+        <record name="CruiseDays" javaclass="com.wm.util.Values">
+          <value name="name">CruiseDays</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="NbrOfCruises" javaclass="com.wm.util.Values">
+          <value name="name">NbrOfCruises</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="WorldMaxDays" javaclass="com.wm.util.Values">
+          <value name="name">WorldMaxDays</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="LastCruise" javaclass="com.wm.util.Values">
+          <value name="name">LastCruise</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">PrincessCanonicals.api.v1.contacts:docTypeRef_LastCruiseType</value>
+        </record>
+        <record name="GrandCruiseCount" javaclass="com.wm.util.Values">
+          <value name="name">GrandCruiseCount</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="TransAtlanticCRZ" javaclass="com.wm.util.Values">
+          <value name="name">TransAtlanticCRZ</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+      </record>
+    </record>
+    <record name="PrincessCanonicals.api.v1.contacts:ContactSummaryResponse" javaclass="com.wm.util.Values">
+      <value name="nsName">PrincessCanonicals.api.v1.contacts:ContactSummaryResponse</value>
+      <Boolean name="autoGenerated">false</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="ContactSummaryResponse" javaclass="com.wm.util.Values">
+          <value name="name">ContactSummaryResponse</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">PrincessCanonicals.api.v1.contacts:docTypeRef_ContactSummaryResponseType</value>
+        </record>
+      </record>
+    </record>
+    <record name="PrincessCanonicals.api.v1.contacts:docTypeRef_ContactSummaryResponseType" javaclass="com.wm.util.Values">
+      <value name="nsName">PrincessCanonicals.api.v1.contacts:docTypeRef_ContactSummaryResponseType</value>
+      <Boolean name="autoGenerated">false</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="GatewayCity" javaclass="com.wm.util.Values">
+          <value name="name">GatewayCity</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="LastUpdatedBy" javaclass="com.wm.util.Values">
+          <value name="name">LastUpdatedBy</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="Email" javaclass="com.wm.util.Values">
+          <value name="name">Email</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">PrincessCanonicals.api.v1.contacts:docTypeRef_EmailType</value>
+        </record>
+        <record name="Address" javaclass="com.wm.util.Values">
+          <value name="name">Address</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">PrincessCanonicals.api.v1.contacts:docTypeRef_AddressDetailType</value>
+        </record>
+        <record name="Telephone" javaclass="com.wm.util.Values">
+          <value name="name">Telephone</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">PrincessCanonicals.api.v1.contacts:docTypeRef_TelephoneType</value>
+        </record>
+        <record name="CVPName" javaclass="com.wm.util.Values">
+          <value name="name">CVPName</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="TravelAgentInd" javaclass="com.wm.util.Values">
+          <value name="name">TravelAgentInd</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="PassengerStatus" javaclass="com.wm.util.Values">
+          <value name="name">PassengerStatus</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="MailBrochureInProgress" javaclass="com.wm.util.Values">
+          <value name="name">MailBrochureInProgress</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="LoyaltyLevel" javaclass="com.wm.util.Values">
+          <value name="name">LoyaltyLevel</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="PersonalDetails" javaclass="com.wm.util.Values">
+          <value name="name">PersonalDetails</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">PrincessCanonicals.api.v1.contacts:docTypeRef_PersonalDetailType</value>
+        </record>
+        <record name="PassportDetails" javaclass="com.wm.util.Values">
+          <value name="name">PassportDetails</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">PrincessCanonicals.api.v1.contacts:docTypeRef_PassportDetailType</value>
+        </record>
+        <record name="Name" javaclass="com.wm.util.Values">
+          <value name="name">Name</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">PrincessCanonicals.api.v1.contacts:docTypeRef_NameDetailType</value>
+        </record>
+        <record name="CruiseHistorySummary" javaclass="com.wm.util.Values">
+          <value name="name">CruiseHistorySummary</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">PrincessCanonicals.api.v1.contacts:docTypeRef_CruiseHistorySummaryType</value>
+        </record>
+        <record name="BlacklistIndicator" javaclass="com.wm.util.Values">
+          <value name="name">BlacklistIndicator</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="CVPPhone" javaclass="com.wm.util.Values">
+          <value name="name">CVPPhone</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="MergeIndicator" javaclass="com.wm.util.Values">
+          <value name="name">MergeIndicator</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="CruiseCompany" javaclass="com.wm.util.Values">
+          <value name="name">CruiseCompany</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">PrincessCanonicals.api.v1.contacts:docTypeRef_CruiseCompanyDetailType</value>
+        </record>
+        <record name="FutureBooked" javaclass="com.wm.util.Values">
+          <value name="name">FutureBooked</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="Id" javaclass="com.wm.util.Values">
+          <value name="name">Id</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="LastUpdated" javaclass="com.wm.util.Values">
+          <value name="name">LastUpdated</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="ContactPreferences" javaclass="com.wm.util.Values">
+          <value name="name">ContactPreferences</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">PrincessCanonicals.api.v1.contacts:docTypeRef_ContactPreferencesDetailType</value>
+        </record>
+      </record>
+    </record>
+    <record name="PrincessCanonicals.api.v1.contacts:docTypeRef_LastCruiseType" javaclass="com.wm.util.Values">
+      <value name="nsName">PrincessCanonicals.api.v1.contacts:docTypeRef_LastCruiseType</value>
+      <Boolean name="autoGenerated">false</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="LastBookingStatus" javaclass="com.wm.util.Values">
+          <value name="name">LastBookingStatus</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="LastDiningPreference" javaclass="com.wm.util.Values">
+          <value name="name">LastDiningPreference</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="LastCruiseDuration" javaclass="com.wm.util.Values">
+          <value name="name">LastCruiseDuration</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="LastBedConfig" javaclass="com.wm.util.Values">
+          <value name="name">LastBedConfig</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="LastDiningTableSize" javaclass="com.wm.util.Values">
+          <value name="name">LastDiningTableSize</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="LastCruiseDestination" javaclass="com.wm.util.Values">
+          <value name="name">LastCruiseDestination</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="LastCruiseShip" javaclass="com.wm.util.Values">
+          <value name="name">LastCruiseShip</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="LastCruiseMetaCategory" javaclass="com.wm.util.Values">
+          <value name="name">LastCruiseMetaCategory</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="LastSailDate" javaclass="com.wm.util.Values">
+          <value name="name">LastSailDate</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="LastShipName" javaclass="com.wm.util.Values">
+          <value name="name">LastShipName</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="LastDiningTableNum" javaclass="com.wm.util.Values">
+          <value name="name">LastDiningTableNum</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="LastAgencyID" javaclass="com.wm.util.Values">
+          <value name="name">LastAgencyID</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+      </record>
+    </record>
+    <record name="PrincessCanonicals.api.v1.contacts_1:docTypeRef_ContactSummaryRequestType" javaclass="com.wm.util.Values">
+      <value name="nsName">PrincessCanonicals.api.v1.contacts_1:docTypeRef_ContactSummaryRequestType</value>
+      <Boolean name="autoGenerated">false</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="CruiseCompany" javaclass="com.wm.util.Values">
+          <value name="name">CruiseCompany</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">PrincessCanonicals.api.v1.contacts_1:docTypeRef_CruiseCompanyDetailType</value>
+        </record>
+        <record name="CustomerId" javaclass="com.wm.util.Values">
+          <value name="name">CustomerId</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="FormCode" javaclass="com.wm.util.Values">
+          <value name="name">FormCode</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+      </record>
+    </record>
+    <record name="PrincessCanonicals.api.v1.contacts:docTypeRef_AddressDetailType" javaclass="com.wm.util.Values">
+      <value name="nsName">PrincessCanonicals.api.v1.contacts:docTypeRef_AddressDetailType</value>
+      <Boolean name="autoGenerated">false</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="DeliveryPointBarCode" javaclass="com.wm.util.Values">
+          <value name="name">DeliveryPointBarCode</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="CarrierRoute" javaclass="com.wm.util.Values">
+          <value name="name">CarrierRoute</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="HouseName" javaclass="com.wm.util.Values">
+          <value name="name">HouseName</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="Address2" javaclass="com.wm.util.Values">
+          <value name="name">Address2</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="Address3" javaclass="com.wm.util.Values">
+          <value name="name">Address3</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="Country" javaclass="com.wm.util.Values">
+          <value name="name">Country</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="Address1" javaclass="com.wm.util.Values">
+          <value name="name">Address1</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="City" javaclass="com.wm.util.Values">
+          <value name="name">City</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="PostCode" javaclass="com.wm.util.Values">
+          <value name="name">PostCode</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="StateOrCounty" javaclass="com.wm.util.Values">
+          <value name="name">StateOrCounty</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+      </record>
+    </record>
+    <record name="Cruise:_post_$response" javaclass="com.wm.util.Values">
+      <value name="nsName">Cruise:_post_$response</value>
+      <Boolean name="autoGenerated">true</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="ContactSummaryResponse" javaclass="com.wm.util.Values">
+          <value name="name">ContactSummaryResponse</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">PrincessCanonicals.api.v1.contacts:ContactSummaryResponse</value>
+        </record>
+      </record>
+    </record>
+    <record name="PrincessCanonicals.api.v1.contacts:docTypeRef_PassportDetailType" javaclass="com.wm.util.Values">
+      <value name="nsName">PrincessCanonicals.api.v1.contacts:docTypeRef_PassportDetailType</value>
+      <Boolean name="autoGenerated">false</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="AlienResidentId" javaclass="com.wm.util.Values">
+          <value name="name">AlienResidentId</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="PassportFullName" javaclass="com.wm.util.Values">
+          <value name="name">PassportFullName</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="IssuingAuthorityLocation" javaclass="com.wm.util.Values">
+          <value name="name">IssuingAuthorityLocation</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="DateOfIssue" javaclass="com.wm.util.Values">
+          <value name="name">DateOfIssue</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="PassportNumber" javaclass="com.wm.util.Values">
+          <value name="name">PassportNumber</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="CountryOfIssue" javaclass="com.wm.util.Values">
+          <value name="name">CountryOfIssue</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="PlaceOfIssue" javaclass="com.wm.util.Values">
+          <value name="name">PlaceOfIssue</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="DateOfExpiration" javaclass="com.wm.util.Values">
+          <value name="name">DateOfExpiration</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+      </record>
+    </record>
+    <record name="PrincessCanonicals.api.v1.contacts:docTypeRef_NameDetailType" javaclass="com.wm.util.Values">
+      <value name="nsName">PrincessCanonicals.api.v1.contacts:docTypeRef_NameDetailType</value>
+      <Boolean name="autoGenerated">false</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="Suffix" javaclass="com.wm.util.Values">
+          <value name="name">Suffix</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="PreferredNameIndicator" javaclass="com.wm.util.Values">
+          <value name="name">PreferredNameIndicator</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="FirstName" javaclass="com.wm.util.Values">
+          <value name="name">FirstName</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="ContactStatus" javaclass="com.wm.util.Values">
+          <value name="name">ContactStatus</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="FullName" javaclass="com.wm.util.Values">
+          <value name="name">FullName</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="Title" javaclass="com.wm.util.Values">
+          <value name="name">Title</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="LastName" javaclass="com.wm.util.Values">
+          <value name="name">LastName</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="MiddleName" javaclass="com.wm.util.Values">
+          <value name="name">MiddleName</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+        <record name="PreferredLastName" javaclass="com.wm.util.Values">
+          <value name="name">PreferredLastName</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+        </record>
+      </record>
+    </record>
+  </record>
+</Values>
