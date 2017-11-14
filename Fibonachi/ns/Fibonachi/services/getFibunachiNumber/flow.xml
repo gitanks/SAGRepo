@@ -1653,7 +1653,7 @@
 </RETRY>
 
 <INVOKE TIMEOUT="" SERVICE="pub.flow:clearPipeline" VALIDATE-IN="$none" VALIDATE-OUT="$none">
-  <COMMENT>testm 11111</COMMENT>
+  <COMMENT>testm</COMMENT>
 
   <!-- nodes -->
 
